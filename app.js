@@ -1,0 +1,343 @@
+(function () {
+  "use strict";
+
+  const data = window.INTERVIEW_DATA;
+  const state = {
+    selectedId: data.items[0].id,
+    query: "",
+    activeTab: "main-answer",
+    focusedNavIndex: 0,
+  };
+
+  const elements = {
+    body: document.body,
+    nav: document.getElementById("question-nav"),
+    search: document.getElementById("question-search"),
+    clearSearch: document.getElementById("clear-search"),
+    resultCount: document.getElementById("result-count"),
+    title: document.getElementById("question-title"),
+    meta: document.getElementById("question-meta"),
+    competency: document.getElementById("question-competency"),
+    points: document.getElementById("talking-points"),
+    script: document.getElementById("full-script"),
+    followUps: document.getElementById("follow-up-list"),
+    followUpCount: document.getElementById("follow-up-count"),
+    coachNote: document.getElementById("coach-note"),
+    coachNoteBox: document.querySelector(".coach-note"),
+    answerTabs: document.getElementById("answer-tabs"),
+    guidePage: document.getElementById("guide-page"),
+    answerHeading: document.querySelector(".answer-heading"),
+    answerPanel: document.getElementById("answer-panel"),
+    copyButton: document.getElementById("copy-button"),
+    focusToggle: document.getElementById("focus-toggle"),
+    menuToggle: document.getElementById("menu-toggle"),
+    backdrop: document.getElementById("backdrop"),
+    toast: document.getElementById("toast"),
+    tabs: Array.from(document.querySelectorAll(".tab")),
+    panels: Array.from(document.querySelectorAll(".tab-panel")),
+  };
+
+  function normalize(value) {
+    return value.toLowerCase().replace(/\s+/g, " ").trim();
+  }
+
+  function searchableText(question) {
+    return normalize([
+      question.title,
+      question.question,
+      question.competency,
+      question.script,
+      (question.points || []).join(" "),
+      (question.followUps || []).map((item) => `${item.question} ${item.points.join(" ")}`).join(" "),
+      question.searchText,
+      question.group,
+      (question.keywords || []).join(" "),
+    ].join(" "));
+  }
+
+  function matchesQuery(question) {
+    if (!state.query) return true;
+    const terms = normalize(state.query).split(" ").filter(Boolean);
+    const haystack = searchableText(question);
+    return terms.every((term) => haystack.includes(term));
+  }
+
+  function getSelected() {
+    return data.items.find((question) => question.id === state.selectedId) || data.items[0];
+  }
+
+  function renderNavigation() {
+    const visible = data.items.filter(matchesQuery);
+    const visibleIds = new Set(visible.map((question) => question.id));
+
+    if (visible.length && !visibleIds.has(state.selectedId)) {
+      state.selectedId = visible[0].id;
+      renderAnswer();
+    }
+
+    elements.resultCount.textContent = state.query
+      ? `${visible.length} matching question${visible.length === 1 ? "" : "s"}`
+      : `${data.items.filter((item) => item.type === "question").length} questions + ${data.items.filter((item) => item.type === "guide").length} guide pages`;
+    elements.clearSearch.hidden = !state.query;
+
+    if (!visible.length) {
+      elements.nav.innerHTML = '<p class="no-results">No matching questions. Try a story name, competency, metric, or keyword.</p>';
+      return;
+    }
+
+    elements.nav.innerHTML = data.groups.map((group) => {
+      const groupQuestions = visible.filter((question) => question.group === group.id);
+      if (!groupQuestions.length) return "";
+
+      const items = groupQuestions.map((question) => {
+        const active = question.id === state.selectedId;
+        const marker = question.type === "guide"
+          ? guideIcon(question.navIcon)
+          : escapeHtml(String(question.number).padStart(2, "0"));
+        return `
+          <button class="question-button${active ? " active" : ""}" type="button" data-question-id="${question.id}" aria-current="${active ? "true" : "false"}">
+            <span class="question-number${question.type === "guide" ? " guide-icon" : ""}">${marker}</span>
+            <span class="question-label">${escapeHtml(question.title || question.question)}</span>
+          </button>
+        `;
+      }).join("");
+
+      return `
+        <section class="question-group" data-group-id="${group.id}">
+          <button class="group-toggle" type="button" aria-expanded="true">
+            <svg aria-hidden="true" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg>
+            <span>${escapeHtml(group.label)}</span>
+            <span class="group-count">${groupQuestions.length}</span>
+          </button>
+          <div class="group-items">${items}</div>
+        </section>
+      `;
+    }).join("");
+
+    bindNavigation();
+  }
+
+  function renderAnswer() {
+    const question = getSelected();
+    const group = data.groups.find((item) => item.id === question.group);
+
+    if (question.type === "guide") {
+      renderGuidePage(question, group);
+      document.title = `${question.title} | Interview Command Center`;
+      history.replaceState(null, "", `#${question.id}`);
+      renderNavigation();
+      return;
+    }
+
+    elements.answerHeading.hidden = false;
+    elements.answerTabs.hidden = false;
+    elements.coachNoteBox.hidden = false;
+    elements.guidePage.hidden = true;
+    activateTab(state.activeTab);
+    elements.meta.textContent = `Question ${String(question.number).padStart(2, "0")} · ${group.label}`;
+    elements.title.textContent = question.question;
+    elements.competency.textContent = question.competency;
+    elements.points.innerHTML = question.points.map((point) => `<li>${escapeHtml(point)}</li>`).join("");
+    elements.script.innerHTML = question.script
+      .split(/\n\n+/)
+      .map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`)
+      .join("");
+    elements.followUps.innerHTML = question.followUps.map((followUp, index) => `
+      <div class="follow-up-card">
+        <div class="follow-up-heading">
+          <span class="follow-up-number">${String(index + 1).padStart(2, "0")}</span>
+          <h3>${escapeHtml(followUp.question)}</h3>
+        </div>
+        <ul>${followUp.points.map((point) => `<li>${escapeHtml(point)}</li>`).join("")}</ul>
+      </div>
+    `).join("");
+    elements.followUpCount.textContent = question.followUps.length;
+    elements.coachNote.textContent = question.note;
+
+    document.title = `${question.question} | Interview Command Center`;
+    history.replaceState(null, "", `#${question.id}`);
+    renderNavigation();
+  }
+
+  function renderGuidePage(page, group) {
+    elements.answerHeading.hidden = true;
+    elements.answerTabs.hidden = true;
+    elements.coachNoteBox.hidden = true;
+    elements.guidePage.hidden = false;
+    elements.panels.forEach((panel) => {
+      panel.hidden = true;
+      panel.classList.remove("active");
+    });
+    elements.guidePage.innerHTML = page.html;
+  }
+
+  function bindNavigation() {
+    elements.nav.querySelectorAll(".group-toggle").forEach((button) => {
+      button.addEventListener("click", () => {
+        const group = button.closest(".question-group");
+        const collapsed = group.classList.toggle("collapsed");
+        button.setAttribute("aria-expanded", String(!collapsed));
+      });
+    });
+
+    elements.nav.querySelectorAll(".question-button").forEach((button) => {
+      button.addEventListener("click", () => {
+        selectQuestion(button.dataset.questionId);
+      });
+    });
+
+  }
+
+  function selectQuestion(id) {
+    state.selectedId = id;
+    renderAnswer();
+    closeMobileMenu();
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+
+  function activateTab(name) {
+    state.activeTab = name;
+    elements.tabs.forEach((tab) => {
+      const active = tab.id === `${name}-tab`;
+      tab.classList.toggle("active", active);
+      tab.setAttribute("aria-selected", String(active));
+    });
+    elements.panels.forEach((panel) => {
+      const active = panel.id === `${name}-panel`;
+      panel.classList.toggle("active", active);
+      panel.hidden = !active;
+    });
+  }
+
+  function copyCurrentNotes() {
+    const question = getSelected();
+    const content = question.type === "guide"
+      ? `${question.title}\n\n${question.searchText}`
+      : state.activeTab === "follow-ups"
+        ? `${question.question}\n\nLikely follow-ups:\n${question.followUps.map((item) => `${item.question}\n${item.points.map((point) => `- ${point}`).join("\n")}`).join("\n\n")}`
+        : `${question.question}\n\n${question.script}\n\nTalking points:\n${question.points.map((item) => `- ${item}`).join("\n")}`;
+
+    navigator.clipboard.writeText(content).then(() => {
+      showToast("Copied to clipboard");
+    }).catch(() => {
+      showToast("Copy was blocked by the browser");
+    });
+  }
+
+  function showToast(message) {
+    elements.toast.textContent = message;
+    elements.toast.classList.add("show");
+    window.clearTimeout(showToast.timeout);
+    showToast.timeout = window.setTimeout(() => elements.toast.classList.remove("show"), 1800);
+  }
+
+  function toggleFocusMode() {
+    const active = elements.body.classList.toggle("focus-mode");
+    elements.focusToggle.setAttribute("aria-pressed", String(active));
+    elements.focusToggle.setAttribute("aria-label", active ? "Exit focus mode" : "Enter focus mode");
+    elements.focusToggle.querySelector("span").textContent = active ? "Exit focus" : "Focus mode";
+  }
+
+  function openMobileMenu() {
+    elements.body.classList.add("menu-open");
+    elements.backdrop.hidden = false;
+    elements.menuToggle.setAttribute("aria-expanded", "true");
+  }
+
+  function closeMobileMenu() {
+    elements.body.classList.remove("menu-open");
+    elements.backdrop.hidden = true;
+    elements.menuToggle.setAttribute("aria-expanded", "false");
+  }
+
+  function handleKeyboard(event) {
+    const tagName = document.activeElement?.tagName;
+    const typing = tagName === "INPUT" || tagName === "TEXTAREA";
+
+    if ((event.key === "/" || (event.ctrlKey && event.key.toLowerCase() === "k")) && !typing) {
+      event.preventDefault();
+      elements.search.focus();
+      elements.search.select();
+      return;
+    }
+
+    if (event.key === "Escape") {
+      if (state.query) {
+        state.query = "";
+        elements.search.value = "";
+        renderNavigation();
+      }
+      closeMobileMenu();
+      return;
+    }
+
+    if (typing || !["ArrowDown", "ArrowUp", "Enter"].includes(event.key)) return;
+
+    const visible = data.items.filter(matchesQuery);
+    if (!visible.length) return;
+
+    const currentIndex = Math.max(0, visible.findIndex((question) => question.id === state.selectedId));
+    if (event.key === "ArrowDown") {
+      event.preventDefault();
+      document.activeElement?.blur();
+      selectQuestion(visible[(currentIndex + 1) % visible.length].id);
+    } else if (event.key === "ArrowUp") {
+      event.preventDefault();
+      document.activeElement?.blur();
+      selectQuestion(visible[(currentIndex - 1 + visible.length) % visible.length].id);
+    } else if (event.key === "Enter" && document.activeElement === elements.search) {
+      event.preventDefault();
+      selectQuestion(visible[0].id);
+    }
+  }
+
+  function escapeHtml(value) {
+    const div = document.createElement("div");
+    div.textContent = value;
+    return div.innerHTML;
+  }
+
+  function escapeAttribute(value) {
+    return escapeHtml(value).replace(/"/g, "&quot;");
+  }
+
+  function guideIcon(name) {
+    if (name === "compass") {
+      return '<svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="m15.5 8.5-2 5-5 2 2-5 5-2Z"/></svg>';
+    }
+    return '<svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H11v16H6.5A2.5 2.5 0 0 0 4 21.5v-16ZM20 5.5A2.5 2.5 0 0 0 17.5 3H13v16h4.5a2.5 2.5 0 0 1 2.5 2.5v-16Z"/></svg>';
+  }
+
+  function initialize() {
+    const hashId = location.hash.slice(1);
+    if (data.items.some((question) => question.id === hashId)) {
+      state.selectedId = hashId;
+    }
+
+    elements.search.addEventListener("input", (event) => {
+      state.query = event.target.value;
+      renderNavigation();
+    });
+    elements.clearSearch.addEventListener("click", () => {
+      state.query = "";
+      elements.search.value = "";
+      renderNavigation();
+      elements.search.focus();
+    });
+    elements.tabs.forEach((tab) => {
+      tab.addEventListener("click", () => activateTab(tab.id.replace("-tab", "")));
+    });
+    elements.copyButton.addEventListener("click", copyCurrentNotes);
+    elements.focusToggle.addEventListener("click", toggleFocusMode);
+    elements.menuToggle.addEventListener("click", () => {
+      elements.body.classList.contains("menu-open") ? closeMobileMenu() : openMobileMenu();
+    });
+    elements.backdrop.addEventListener("click", closeMobileMenu);
+    document.addEventListener("keydown", handleKeyboard);
+
+    activateTab(state.activeTab);
+    renderAnswer();
+  }
+
+  initialize();
+})();
