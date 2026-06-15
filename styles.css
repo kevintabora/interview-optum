@@ -871,6 +871,39 @@ button:focus-visible {
   line-height: 1.68;
 }
 
+.closing-question-list {
+  display: grid;
+  gap: 13px;
+  margin-top: 28px;
+}
+
+.closing-question-list article {
+  padding: 17px 20px;
+  background: var(--white);
+  border: 1px solid var(--slate-200);
+  border-left: 4px solid var(--orange-600);
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  box-shadow: 0 4px 16px rgba(16, 42, 67, 0.035);
+}
+
+.closing-question-list h3 {
+  margin: 0;
+  color: var(--navy-900);
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+.closing-question-list p {
+  margin: 7px 0 0;
+  color: var(--slate-600);
+  font-size: 0.86rem;
+  line-height: 1.5;
+}
+
+.closing-question-list strong {
+  color: var(--blue-700);
+}
+
 .rhythm-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);

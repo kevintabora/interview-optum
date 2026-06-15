@@ -300,6 +300,9 @@
   }
 
   function guideIcon(name) {
+    if (name === "chat") {
+      return '<svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 5h14v10H9l-4 4V5Z"/><path d="M8 9h8M8 12h5"/></svg>';
+    }
     if (name === "compass") {
       return '<svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="m15.5 8.5-2 5-5 2 2-5 5-2Z"/></svg>';
     }
