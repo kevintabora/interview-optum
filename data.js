@@ -35,6 +35,10 @@ window.INTERVIEW_DATA = {
     {
       "id": "management",
       "label": "Manager readiness"
+    },
+    {
+      "id": "learning",
+      "label": "Learning strategy"
     }
   ],
   "items": [
@@ -1045,41 +1049,42 @@ window.INTERVIEW_DATA = {
       "group": "communications",
       "question": "How would you communicate across cultures, shifts, roles, and different levels of technical knowledge?",
       "competency": "Inclusive communication, global collaboration, accessibility",
-      "script": "I approach inclusive communication much like audience analysis in instructional design. I segment by role, current knowledge, shift, language needs, channel access, and the action people need to take.\n\nFor US and Philippine teams, timing matters. I try to send important messages during overlapping work hours so both groups can respond while the context is fresh. I have found that direct requests work well when I also explain the reason, benefit, owner, and deadline. At the same time, I avoid treating culture as a fixed personality. I adapt to the person, their role, and the situation.\n\nFor the message itself, I use plain language, explain unfamiliar terms, and provide detail in layers. A leader may need the decision and business impact. A manager may need talking points and an FAQ. A frontline employee may need a short explanation, a clear action, and access through the channel they actually use.\n\nI would test important communications with representative employees, provide accessible formats, and give people more than one way to ask questions, including asynchronous or private options. Agreement in a meeting is not enough. I confirm understanding and watch the follow-through.",
+      "script": "My direct experience is strongest across teams in the Philippines, the US, and India. I start by setting working agreements instead of assuming that one communication style fits an entire region. We clarify roles, decision rights, deadlines, response expectations, and which channel is the source of truth.\n\nTime-zone fairness matters. I use overlap hours when live discussion is needed, rotate inconvenient meeting times when possible, and use written pre-reads or asynchronous reviews so one region is not always disadvantaged. I also check regional holidays and shift patterns before setting deadlines.\n\nFor US partners, I have found that a direct request works well when I include the reason, benefit, owner, and deadline. With Philippine and Indian colleagues, hierarchy or meeting dynamics can sometimes make people less comfortable challenging an idea publicly. I do not assume that applies to everyone. I create other ways to contribute, such as written comments, smaller discussions, or private follow-ups, and I actively invite the people closest to the work to speak.\n\nAcross all regions, I use plain language, limit local idioms and unexplained acronyms, and send a written summary of decisions, owners, and next steps. If I were working with a region where I had less experience, such as Latin America, I would ask local partners about their norms rather than arrive with a cultural formula. The goal is not to make everyone communicate the same way. It is to create enough clarity and psychological safety that different teams can make good decisions together.",
       "points": [
-        "Segment by role, knowledge, shift, language, access, action",
-        "Use overlap hours for PH/US",
+        "Direct experience: Philippines, US, and India",
+        "Set working agreements: roles, decisions, deadlines, channels",
+        "Use overlap hours, rotate inconvenience, support async review",
+        "Check shifts, regional holidays, and access",
         "Direct request + reason + benefit + owner + deadline",
-        "Do not stereotype culture",
-        "Layer detail by audience",
-        "Plain language and accessible formats",
-        "Test with representative users",
-        "Multiple feedback paths; confirm understanding"
+        "Create public, written, small-group, and private feedback paths",
+        "Plain language; limit idioms and unexplained acronyms",
+        "Summarize decisions, owners, and next steps",
+        "Learn local norms; do not stereotype a region"
       ],
-      "note": "Frame cultural differences as observed patterns, not universal truths about US or Filipino employees.",
+      "note": "Frame regional differences as patterns you have observed, not fixed traits. For a region where you have limited experience, explain how you would learn from local partners.",
       "followUps": [
         {
           "question": "How do you adapt a message for frontline employees versus leaders?",
           "points": [
             "Leaders need the decision and business impact; frontline employees need plain language, relevance, and a clear action.",
-            "Segment by role, knowledge, shift, language, access, action",
-            "Use overlap hours for PH/US"
+            "Direct experience: Philippines, US, and India",
+            "Set working agreements: roles, decisions, deadlines, channels"
           ]
         },
         {
           "question": "What communication differences have you observed between US and PH teams?",
           "points": [
             "I plan around overlap hours and use direct requests with the reason, benefit, owner, and deadline.",
-            "Direct request + reason + benefit + owner + deadline",
-            "Do not stereotype culture"
+            "Use overlap hours, rotate inconvenience, support async review",
+            "Check shifts, regional holidays, and access"
           ]
         },
         {
           "question": "How would you make a communication inclusive and accessible?",
           "points": [
             "I segment access needs, use plain language and accessible formats, and test with representative employees.",
-            "Layer detail by audience",
-            "Plain language and accessible formats"
+            "Direct request + reason + benefit + owner + deadline",
+            "Create public, written, small-group, and private feedback paths"
           ]
         }
       ],
@@ -1194,6 +1199,61 @@ window.INTERVIEW_DATA = {
         "transition",
         "fairness",
         "colleague"
+      ]
+    },
+    {
+      "id": "q-23-how-do-you-define-and-measure-speed-to-proficien",
+      "type": "question",
+      "number": 23,
+      "group": "learning",
+      "question": "How do you define and measure speed to proficiency?",
+      "competency": "Learning strategy, operational measurement, performance consulting",
+      "script": "I define speed to proficiency as the elapsed time from when someone begins onboarding or training to when they can perform the job independently, consistently, and at an agreed business standard. It is not the shortest possible course, and it is not course completion. Someone can finish training quickly and still require heavy support on the job.\n\nThe first step is to define proficiency with the business. Depending on the role, that could include quality or accuracy, productivity, compliance, first-call resolution, customer outcomes, and how often the employee needs help or escalates work. I would also define how long the standard must be sustained, for example, two or four consecutive weeks. That prevents one strong day from being treated as proficiency.\n\nThen I would establish the current baseline and track milestones along the learning curve. When can the employee handle simple work? When can they handle the normal range of work? When do they reach the target with acceptable independence? I would compare cohorts and look at where people stall, because the delay may come from training, coaching availability, system access, workflow design, or unclear performance expectations.\n\nThe goal is to shorten time to independent performance without creating quality, compliance, or customer risk. In 3E, the practical improvement was that analysts no longer had to wait for SME availability. They completed the formal training in about 10 to 12 weeks and began taking tickets after roughly three months, compared with a process that could take six months to a year.",
+      "points": [
+        "Elapsed time from start to consistent, independent job performance",
+        "Not course completion or simply making training shorter",
+        "Define proficiency with business metrics and independence",
+        "Possible measures: quality, productivity, compliance, FCR, CSAT, escalations",
+        "Require sustained performance over an agreed period",
+        "Baseline current time and track learning-curve milestones",
+        "Diagnose training and non-training barriers",
+        "Shorten time without sacrificing quality or customer risk",
+        "3E proof: training 10-12 weeks; tickets around month 3"
+      ],
+      "note": "Lead with the one-sentence operational definition. The interviewer should hear a measurable finish line, not a description of an efficient curriculum.",
+      "followUps": [
+        {
+          "question": "What specific metrics would you use to define proficiency?",
+          "points": [
+            "I would agree with operations on a balanced scorecard of quality, productivity, compliance, customer results, and independence.",
+            "Elapsed time from start to consistent, independent job performance",
+            "Not course completion or simply making training shorter"
+          ]
+        },
+        {
+          "question": "How would you distinguish training time from time to proficiency?",
+          "points": [
+            "Training time ends when instruction ends; time to proficiency ends when sustained independent performance begins.",
+            "Define proficiency with business metrics and independence",
+            "Possible measures: quality, productivity, compliance, FCR, CSAT, escalations"
+          ]
+        },
+        {
+          "question": "What would you do if training completion improved but proficiency did not?",
+          "points": [
+            "I would investigate transfer, coaching, tools, workflow, access, and manager reinforcement instead of only revising the course.",
+            "Require sustained performance over an agreed period",
+            "Baseline current time and track learning-curve milestones"
+          ]
+        }
+      ],
+      "keywords": [
+        "speed to proficiency",
+        "time to proficiency",
+        "learning curve",
+        "independent performance",
+        "onboarding",
+        "metrics"
       ]
     }
   ]

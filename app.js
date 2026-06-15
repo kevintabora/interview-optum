@@ -123,7 +123,6 @@
 
     if (question.type === "guide") {
       renderGuidePage(question, group);
-      document.title = `${question.title} | Interview Command Center`;
       history.replaceState(null, "", `#${question.id}`);
       renderNavigation();
       return;
@@ -154,7 +153,6 @@
     elements.followUpCount.textContent = question.followUps.length;
     elements.coachNote.textContent = question.note;
 
-    document.title = `${question.question} | Interview Command Center`;
     history.replaceState(null, "", `#${question.id}`);
     renderNavigation();
   }
