@@ -2,11 +2,13 @@
   "use strict";
 
   const data = window.INTERVIEW_DATA;
+  const CUE_STORAGE_KEY = "interviewGuideDeliveryCues";
   const state = {
     selectedId: data.items[0].id,
     query: "",
     activeTab: "main-answer",
     focusedNavIndex: 0,
+    showCues: false,
   };
 
   const elements = {
@@ -28,6 +30,7 @@
     guidePage: document.getElementById("guide-page"),
     answerHeading: document.querySelector(".answer-heading"),
     answerPanel: document.getElementById("answer-panel"),
+    cueToggle: document.getElementById("cue-toggle"),
     copyButton: document.getElementById("copy-button"),
     focusToggle: document.getElementById("focus-toggle"),
     menuToggle: document.getElementById("menu-toggle"),
@@ -131,16 +134,14 @@
     elements.answerHeading.hidden = false;
     elements.answerTabs.hidden = false;
     elements.coachNoteBox.hidden = false;
+    elements.cueToggle.hidden = false;
     elements.guidePage.hidden = true;
     activateTab(state.activeTab);
     elements.meta.textContent = `Question ${String(question.number).padStart(2, "0")} · ${group.label}`;
     elements.title.textContent = question.question;
     elements.competency.textContent = question.competency;
     elements.points.innerHTML = question.points.map((point) => `<li>${escapeHtml(point)}</li>`).join("");
-    elements.script.innerHTML = question.script
-      .split(/\n\n+/)
-      .map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`)
-      .join("");
+    elements.script.innerHTML = renderScript(question.script);
     elements.followUps.innerHTML = question.followUps.map((followUp, index) => `
       <div class="follow-up-card">
         <div class="follow-up-heading">
@@ -161,6 +162,7 @@
     elements.answerHeading.hidden = true;
     elements.answerTabs.hidden = true;
     elements.coachNoteBox.hidden = true;
+    elements.cueToggle.hidden = true;
     elements.guidePage.hidden = false;
     elements.panels.forEach((panel) => {
       panel.hidden = true;
@@ -222,6 +224,44 @@
     });
   }
 
+  function renderScript(script) {
+    const question = getSelected();
+    const source = state.showCues && question.cueScript ? question.cueScript : script;
+
+    return source
+      .split(/\n\n+/)
+      .map((paragraph) => `<p>${state.showCues ? renderCueParagraph(paragraph) : escapeHtml(paragraph)}</p>`)
+      .join("");
+  }
+
+  function renderCueParagraph(paragraph) {
+    let html = "";
+    let index = 0;
+
+    while (index < paragraph.length) {
+      if (paragraph.startsWith("||", index)) {
+        html += '<span class="pause-mark long" aria-hidden="true">||</span>';
+        index += 2;
+      } else if (paragraph[index] === "|") {
+        html += '<span class="pause-mark short" aria-hidden="true">|</span>';
+        index += 1;
+      } else {
+        const nextSpecial = findNextCueToken(paragraph, index);
+        html += escapeHtml(paragraph.slice(index, nextSpecial));
+        index = nextSpecial;
+      }
+    }
+
+    return html;
+  }
+
+  function findNextCueToken(value, start) {
+    const markers = ["||", "|"]
+      .map((marker) => value.indexOf(marker, start))
+      .filter((position) => position !== -1);
+    return markers.length ? Math.min(...markers) : value.length;
+  }
+
   function showToast(message) {
     elements.toast.textContent = message;
     elements.toast.classList.add("show");
@@ -234,6 +274,36 @@
     elements.focusToggle.setAttribute("aria-pressed", String(active));
     elements.focusToggle.setAttribute("aria-label", active ? "Exit focus mode" : "Enter focus mode");
     elements.focusToggle.querySelector("span").textContent = active ? "Exit focus" : "Focus mode";
+  }
+
+  function toggleDeliveryCues() {
+    state.showCues = !state.showCues;
+    storeCuePreference();
+    updateCueToggle();
+    renderAnswer();
+  }
+
+  function updateCueToggle() {
+    elements.body.classList.toggle("delivery-cues-on", state.showCues);
+    elements.cueToggle.setAttribute("aria-pressed", String(state.showCues));
+    elements.cueToggle.setAttribute("aria-label", state.showCues ? "Hide delivery cues" : "Show delivery cues");
+    elements.cueToggle.querySelector("span").textContent = state.showCues ? "Hide cues" : "Cues";
+  }
+
+  function storeCuePreference() {
+    try {
+      window.localStorage.setItem(CUE_STORAGE_KEY, state.showCues ? "on" : "off");
+    } catch {
+      // Cues still work for the current session if browser storage is unavailable.
+    }
+  }
+
+  function loadCuePreference() {
+    try {
+      state.showCues = window.localStorage.getItem(CUE_STORAGE_KEY) === "on";
+    } catch {
+      state.showCues = false;
+    }
   }
 
   function openMobileMenu() {
@@ -310,6 +380,8 @@
   }
 
   function initialize() {
+    loadCuePreference();
+
     const hashId = location.hash.slice(1);
     if (data.items.some((question) => question.id === hashId)) {
       state.selectedId = hashId;
@@ -329,6 +401,7 @@
       tab.addEventListener("click", () => activateTab(tab.id.replace("-tab", "")));
     });
     elements.copyButton.addEventListener("click", copyCurrentNotes);
+    elements.cueToggle.addEventListener("click", toggleDeliveryCues);
     elements.focusToggle.addEventListener("click", toggleFocusMode);
     elements.menuToggle.addEventListener("click", () => {
       elements.body.classList.contains("menu-open") ? closeMobileMenu() : openMobileMenu();
@@ -336,6 +409,7 @@
     elements.backdrop.addEventListener("click", closeMobileMenu);
     document.addEventListener("keydown", handleKeyboard);
 
+    updateCueToggle();
     activateTab(state.activeTab);
     renderAnswer();
   }
