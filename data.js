@@ -75,8 +75,8 @@ window.INTERVIEW_DATA = {
       "group": "start",
       "navIcon": "questions",
       "title": "Questions map",
-      "searchText": "Questions map quick navigation bird eye view. Opening and fit. Impact and change. Stakeholders and feedback. Failure and growth. Priorities and delivery. People leadership. Communication strategy. Manager readiness. Learning strategy. Tell me about yourself, why this role, greatest achievement, complex project, failure, weakness, prioritization, coaching, MATCH, REACT, PACES, speed to proficiency.",
-      "html": "\n          <div class=\"guide-strategy questions-map-page\">\n            <h2>Questions map</h2>\n            <p class=\"strategy-lead\">Use this as your bird's-eye view during the interview. Scan the bold keywords, then open the closest match when a question is asked out of order.</p>\n            <div class=\"question-map-grid\">\n              <section class=\"question-map-group\">\n                <h3>Opening and fit</h3>\n                <div class=\"question-map-list\">\n                  <a class=\"question-map-link\" href=\"#q-01-tell-me-about-yourself\" data-question-link=\"q-01-tell-me-about-yourself\">\n                    <span class=\"question-map-number\">01</span>\n                    <span><b>Tell me about yourself</b><small>career story, Optum, ID + comms</small></span>\n                  </a>\n                  <a class=\"question-map-link\" href=\"#q-02-why-do-you-want-this-role-now\" data-question-link=\"q-02-why-do-you-want-this-role-now\">\n                    <span class=\"question-map-number\">02</span>\n                    <span><b>Why this role now</b><small>Optum, broader contribution, selling the vision</small></span>\n                  </a>\n                  <a class=\"question-map-link\" href=\"#q-03-why-should-we-choose-you-over-candidates-with-mo\" data-question-link=\"q-03-why-should-we-choose-you-over-candidates-with-mo\">\n                    <span class=\"question-map-number\">03</span>\n                    <span><b>Why choose you</b><small>ID + comms + analytics, internal context</small></span>\n                  </a>\n                </div>\n              </section>\n              <section class=\"question-map-group\">\n                <h3>Impact and change</h3>\n                <div class=\"question-map-list\">\n                  <a class=\"question-map-link\" href=\"#q-04-what-is-your-greatest-professional-achievement\" data-question-link=\"q-04-what-is-your-greatest-professional-achievement\">\n                    <span class=\"question-map-number\">04</span>\n                    <span><b>Greatest achievement</b><small>Engage and Connect, $200K, 9.2, CSAT</small></span>\n                  </a>\n                  <a class=\"question-map-link\" href=\"#q-05-tell-me-about-a-high-stakes-change-where-you-led\" data-question-link=\"q-05-tell-me-about-a-high-stakes-change-where-you-led\">\n                    <span class=\"question-map-number\">05</span>\n                    <span><b>High-stakes communication</b><small>rollout, pilots, leaders, adoption</small></span>\n                  </a>\n                </div>\n              </section>\n              <section class=\"question-map-group\">\n                <h3>Stakeholders and feedback</h3>\n                <div class=\"question-map-list\">\n                  <a class=\"question-map-link\" href=\"#q-06-describe-a-complex-project-involving-many-stakeh\" data-question-link=\"q-06-describe-a-complex-project-involving-many-stakeh\">\n                    <span class=\"question-map-number\">06</span>\n                    <span><b>Complex project</b><small>3E, 21 SMEs, onboarding, 10-12 weeks</small></span>\n                  </a>\n                  <a class=\"question-map-link\" href=\"#q-07-tell-me-about-a-time-you-faced-resistance-or-dis\" data-question-link=\"q-07-tell-me-about-a-time-you-faced-resistance-or-dis\">\n                    <span class=\"question-map-number\">07</span>\n                    <span><b>Resistance or disagreement</b><small>prototype, US/PH alignment, vendor terminology</small></span>\n                  </a>\n                  <a class=\"question-map-link\" href=\"#q-08-tell-me-about-a-time-you-received-unexpected-or-\" data-question-link=\"q-08-tell-me-about-a-time-you-received-unexpected-or-\">\n                    <span class=\"question-map-number\">08</span>\n                    <span><b>Difficult feedback</b><small>Optum job aid, pivot, clarify, recover</small></span>\n                  </a>\n                </div>\n              </section>\n              <section class=\"question-map-group\">\n                <h3>Failure and growth</h3>\n                <div class=\"question-map-list\">\n                  <a class=\"question-map-link\" href=\"#q-09-tell-me-about-a-time-you-failed\" data-question-link=\"q-09-tell-me-about-a-time-you-failed\">\n                    <span class=\"question-map-number\">09</span>\n                    <span><b>Failure</b><small>Alorica FAQ, weak buy-in, no tracking</small></span>\n                  </a>\n                  <a class=\"question-map-link\" href=\"#q-10-what-is-your-biggest-weakness\" data-question-link=\"q-10-what-is-your-biggest-weakness\">\n                    <span class=\"question-map-number\">10</span>\n                    <span><b>Weakness</b><small>high standards, taking over, delegation</small></span>\n                  </a>\n                </div>\n              </section>\n              <section class=\"question-map-group\">\n                <h3>Priorities and delivery</h3>\n                <div class=\"question-map-list\">\n                  <a class=\"question-map-link\" href=\"#q-11-how-do-you-prioritize-competing-tasks\" data-question-link=\"q-11-how-do-you-prioritize-competing-tasks\">\n                    <span class=\"question-map-number\">11</span>\n                    <span><b>Prioritization</b><small>Project Nucleus, pharmacy training, tradeoffs</small></span>\n                  </a>\n                  <a class=\"question-map-link\" href=\"#q-12-tell-me-about-a-time-you-allocated-work-and-led-\" data-question-link=\"q-12-tell-me-about-a-time-you-allocated-work-and-led-\">\n                    <span class=\"question-map-number\">12</span>\n                    <span><b>Led without authority</b><small>Optum Rx tool, one-week prototype, allocation</small></span>\n                  </a>\n                </div>\n              </section>\n              <section class=\"question-map-group\">\n                <h3>People leadership</h3>\n                <div class=\"question-map-list\">\n                  <a class=\"question-map-link\" href=\"#q-13-tell-me-about-a-time-you-coached-someone-and-imp\" data-question-link=\"q-13-tell-me-about-a-time-you-coached-someone-and-imp\">\n                    <span class=\"question-map-number\">13</span>\n                    <span><b>Coaching someone</b><small>AI + Rise session, audience-first feedback</small></span>\n                  </a>\n                  <a class=\"question-map-link\" href=\"#q-14-how-would-you-handle-an-employee-who-repeatedly-\" data-question-link=\"q-14-how-would-you-handle-an-employee-who-repeatedly-\">\n                    <span class=\"question-map-number\">14</span>\n                    <span><b>Missed standards</b><small>clarity, capability, capacity, commitment</small></span>\n                  </a>\n                  <a class=\"question-map-link\" href=\"#q-15-what-is-your-leadership-philosophy\" data-question-link=\"q-15-what-is-your-leadership-philosophy\">\n                    <span class=\"question-map-number\">15</span>\n                    <span><b>Leadership philosophy</b><small>context, not control</small></span>\n                  </a>\n                </div>\n              </section>\n              <section class=\"question-map-group\">\n                <h3>Communication strategy</h3>\n                <div class=\"question-map-list\">\n                  <a class=\"question-map-link\" href=\"#q-16-how-would-you-build-a-communication-strategy-for\" data-question-link=\"q-16-how-would-you-build-a-communication-strategy-for\">\n                    <span class=\"question-map-number\">16</span>\n                    <span><b>MATCH strategy</b><small>mission, audience, target, channels, measure</small></span>\n                  </a>\n                  <a class=\"question-map-link\" href=\"#q-17-how-do-you-measure-communication-effectiveness\" data-question-link=\"q-17-how-do-you-measure-communication-effectiveness\">\n                    <span class=\"question-map-number\">17</span>\n                    <span><b>REACT measurement</b><small>reach, engagement, understanding, action, impact</small></span>\n                  </a>\n                  <a class=\"question-map-link\" href=\"#q-20-how-would-you-communicate-across-cultures-shifts\" data-question-link=\"q-20-how-would-you-communicate-across-cultures-shifts\">\n                    <span class=\"question-map-number\">20</span>\n                    <span><b>Cross-cultural communication</b><small>PH, US, India, timing, clarity, empathy</small></span>\n                  </a>\n                </div>\n              </section>\n              <section class=\"question-map-group\">\n                <h3>Manager readiness</h3>\n                <div class=\"question-map-list\">\n                  <a class=\"question-map-link\" href=\"#q-18-how-would-you-forecast-resources-and-manage-a-mi\" data-question-link=\"q-18-how-would-you-forecast-resources-and-manage-a-mi\">\n                    <span class=\"question-map-number\">18</span>\n                    <span><b>PACES resources</b><small>portfolio, capacity, tradeoffs</small></span>\n                  </a>\n                  <a class=\"question-map-link\" href=\"#q-19-you-have-not-formally-managed-direct-reports-why\" data-question-link=\"q-19-you-have-not-formally-managed-direct-reports-why\">\n                    <span class=\"question-map-number\">19</span>\n                    <span><b>Ready to manage</b><small>project leadership, coaching, formal gap</small></span>\n                  </a>\n                  <a class=\"question-map-link\" href=\"#q-21-what-would-your-first-90-days-look-like\" data-question-link=\"q-21-what-would-your-first-90-days-look-like\">\n                    <span class=\"question-map-number\">21</span>\n                    <span><b>First 90 days</b><small>listen, audit, playbook</small></span>\n                  </a>\n                  <a class=\"question-map-link\" href=\"#q-22-how-would-you-transition-from-peer-to-manager-es\" data-question-link=\"q-22-how-would-you-transition-from-peer-to-manager-es\">\n                    <span class=\"question-map-number\">22</span>\n                    <span><b>Peer to manager</b><small>respect, fairness, comms specialist</small></span>\n                  </a>\n                </div>\n              </section>\n              <section class=\"question-map-group\">\n                <h3>Learning strategy</h3>\n                <div class=\"question-map-list\">\n                  <a class=\"question-map-link\" href=\"#q-23-how-do-you-define-and-measure-speed-to-proficien\" data-question-link=\"q-23-how-do-you-define-and-measure-speed-to-proficien\">\n                    <span class=\"question-map-number\">23</span>\n                    <span><b>Speed to proficiency</b><small>independent performance, standards, 3E</small></span>\n                  </a>\n                </div>\n              </section>\n            </div>\n          </div>\n        "
+      "searchText": "Questions map quick navigation bird eye view. Opening and fit. Impact and change. Stakeholders and feedback. Failure and growth. Priorities and delivery. People leadership. Communication strategy. Manager readiness. Learning strategy. Tell me about yourself, why this role, greatest achievement, innovation, AI Rise code, complex project, failure, weakness, not getting the role, prioritization, coaching, MATCH, REACT, PACES, speed to proficiency.",
+      "html": "\n          <div class=\"guide-strategy questions-map-page\">\n            <h2>Questions map</h2>\n            <p class=\"strategy-lead\">Use this as your bird's-eye view during the interview. Scan the bold keywords, then open the closest match when a question is asked out of order.</p>\n            <div class=\"question-map-grid\">\n              <section class=\"question-map-group\">\n                <h3>Opening and fit</h3>\n                <div class=\"question-map-list\">\n                  <a class=\"question-map-link\" href=\"#q-01-tell-me-about-yourself\" data-question-link=\"q-01-tell-me-about-yourself\">\n                    <span class=\"question-map-number\">01</span>\n                    <span><b>Tell me about yourself</b><small>career story, Optum, ID + comms</small></span>\n                  </a>\n                  <a class=\"question-map-link\" href=\"#q-02-why-do-you-want-this-role-now\" data-question-link=\"q-02-why-do-you-want-this-role-now\">\n                    <span class=\"question-map-number\">02</span>\n                    <span><b>Why this role now</b><small>Optum, broader contribution, selling the vision</small></span>\n                  </a>\n                  <a class=\"question-map-link\" href=\"#q-03-why-should-we-choose-you-over-candidates-with-mo\" data-question-link=\"q-03-why-should-we-choose-you-over-candidates-with-mo\">\n                    <span class=\"question-map-number\">03</span>\n                    <span><b>Why choose you</b><small>ID + comms + analytics, internal context</small></span>\n                  </a>\n                </div>\n              </section>\n              <section class=\"question-map-group\">\n                <h3>Impact and change</h3>\n                <div class=\"question-map-list\">\n                  <a class=\"question-map-link\" href=\"#q-04-what-is-your-greatest-professional-achievement\" data-question-link=\"q-04-what-is-your-greatest-professional-achievement\">\n                    <span class=\"question-map-number\">04</span>\n                    <span><b>Greatest achievement</b><small>Engage and Connect, $200K, 9.2, CSAT</small></span>\n                  </a>\n                  <a class=\"question-map-link\" href=\"#q-optum-ai-generated-rise-code-innovation\" data-question-link=\"q-optum-ai-generated-rise-code-innovation\">\n                    <span class=\"question-map-number\">05</span>\n                    <span><b>AI + Rise innovation</b><small>unused feature, reusable prompt, guide, adoption</small></span>\n                  </a>\n                  <a class=\"question-map-link\" href=\"#q-05-tell-me-about-a-high-stakes-change-where-you-led\" data-question-link=\"q-05-tell-me-about-a-high-stakes-change-where-you-led\">\n                    <span class=\"question-map-number\">06</span>\n                    <span><b>High-stakes communication</b><small>rollout, pilots, leaders, adoption</small></span>\n                  </a>\n                </div>\n              </section>\n              <section class=\"question-map-group\">\n                <h3>Stakeholders and feedback</h3>\n                <div class=\"question-map-list\">\n                  <a class=\"question-map-link\" href=\"#q-06-describe-a-complex-project-involving-many-stakeh\" data-question-link=\"q-06-describe-a-complex-project-involving-many-stakeh\">\n                    <span class=\"question-map-number\">07</span>\n                    <span><b>Complex project</b><small>3E, 21 SMEs, onboarding, 10-12 weeks</small></span>\n                  </a>\n                  <a class=\"question-map-link\" href=\"#q-07-tell-me-about-a-time-you-faced-resistance-or-dis\" data-question-link=\"q-07-tell-me-about-a-time-you-faced-resistance-or-dis\">\n                    <span class=\"question-map-number\">08</span>\n                    <span><b>Resistance or disagreement</b><small>prototype, US/PH alignment, vendor terminology</small></span>\n                  </a>\n                  <a class=\"question-map-link\" href=\"#q-08-tell-me-about-a-time-you-received-unexpected-or-\" data-question-link=\"q-08-tell-me-about-a-time-you-received-unexpected-or-\">\n                    <span class=\"question-map-number\">09</span>\n                    <span><b>Difficult feedback</b><small>Optum job aid, pivot, clarify, recover</small></span>\n                  </a>\n                </div>\n              </section>\n              <section class=\"question-map-group\">\n                <h3>Failure and growth</h3>\n                <div class=\"question-map-list\">\n                  <a class=\"question-map-link\" href=\"#q-09-tell-me-about-a-time-you-failed\" data-question-link=\"q-09-tell-me-about-a-time-you-failed\">\n                    <span class=\"question-map-number\">10</span>\n                    <span><b>Failure</b><small>Alorica FAQ, weak buy-in, no tracking</small></span>\n                  </a>\n                  <a class=\"question-map-link\" href=\"#q-10-what-is-your-biggest-weakness\" data-question-link=\"q-10-what-is-your-biggest-weakness\">\n                    <span class=\"question-map-number\">11</span>\n                    <span><b>Weakness</b><small>high standards, taking over, delegation</small></span>\n                  </a>\n                  <a class=\"question-map-link\" href=\"#q-what-would-you-do-if-you-do-not-get-this-role\" data-question-link=\"q-what-would-you-do-if-you-do-not-get-this-role\">\n                    <span class=\"question-map-number\">12</span>\n                    <span><b>Not getting the role</b><small>disappointed, feedback, stay committed</small></span>\n                  </a>\n                </div>\n              </section>\n              <section class=\"question-map-group\">\n                <h3>Priorities and delivery</h3>\n                <div class=\"question-map-list\">\n                  <a class=\"question-map-link\" href=\"#q-11-how-do-you-prioritize-competing-tasks\" data-question-link=\"q-11-how-do-you-prioritize-competing-tasks\">\n                    <span class=\"question-map-number\">13</span>\n                    <span><b>Prioritization</b><small>Project Nucleus, pharmacy training, tradeoffs</small></span>\n                  </a>\n                  <a class=\"question-map-link\" href=\"#q-12-tell-me-about-a-time-you-allocated-work-and-led-\" data-question-link=\"q-12-tell-me-about-a-time-you-allocated-work-and-led-\">\n                    <span class=\"question-map-number\">14</span>\n                    <span><b>Led without authority</b><small>Optum Rx tool, one-week prototype, allocation</small></span>\n                  </a>\n                </div>\n              </section>\n              <section class=\"question-map-group\">\n                <h3>People leadership</h3>\n                <div class=\"question-map-list\">\n                  <a class=\"question-map-link\" href=\"#q-13-tell-me-about-a-time-you-coached-someone-and-imp\" data-question-link=\"q-13-tell-me-about-a-time-you-coached-someone-and-imp\">\n                    <span class=\"question-map-number\">15</span>\n                    <span><b>Coaching someone</b><small>AI + Rise session, audience-first feedback</small></span>\n                  </a>\n                  <a class=\"question-map-link\" href=\"#q-14-how-would-you-handle-an-employee-who-repeatedly-\" data-question-link=\"q-14-how-would-you-handle-an-employee-who-repeatedly-\">\n                    <span class=\"question-map-number\">16</span>\n                    <span><b>Missed standards</b><small>clarity, capability, capacity, commitment</small></span>\n                  </a>\n                  <a class=\"question-map-link\" href=\"#q-15-what-is-your-leadership-philosophy\" data-question-link=\"q-15-what-is-your-leadership-philosophy\">\n                    <span class=\"question-map-number\">17</span>\n                    <span><b>Leadership philosophy</b><small>context, not control</small></span>\n                  </a>\n                </div>\n              </section>\n              <section class=\"question-map-group\">\n                <h3>Communication strategy</h3>\n                <div class=\"question-map-list\">\n                  <a class=\"question-map-link\" href=\"#q-16-how-would-you-build-a-communication-strategy-for\" data-question-link=\"q-16-how-would-you-build-a-communication-strategy-for\">\n                    <span class=\"question-map-number\">18</span>\n                    <span><b>MATCH strategy</b><small>mission, audience, target, channels, measure</small></span>\n                  </a>\n                  <a class=\"question-map-link\" href=\"#q-17-how-do-you-measure-communication-effectiveness\" data-question-link=\"q-17-how-do-you-measure-communication-effectiveness\">\n                    <span class=\"question-map-number\">19</span>\n                    <span><b>REACT measurement</b><small>reach, engagement, understanding, action, impact</small></span>\n                  </a>\n                  <a class=\"question-map-link\" href=\"#q-20-how-would-you-communicate-across-cultures-shifts\" data-question-link=\"q-20-how-would-you-communicate-across-cultures-shifts\">\n                    <span class=\"question-map-number\">22</span>\n                    <span><b>Cross-cultural communication</b><small>PH, US, India, timing, clarity, empathy</small></span>\n                  </a>\n                </div>\n              </section>\n              <section class=\"question-map-group\">\n                <h3>Manager readiness</h3>\n                <div class=\"question-map-list\">\n                  <a class=\"question-map-link\" href=\"#q-18-how-would-you-forecast-resources-and-manage-a-mi\" data-question-link=\"q-18-how-would-you-forecast-resources-and-manage-a-mi\">\n                    <span class=\"question-map-number\">20</span>\n                    <span><b>PACES resources</b><small>portfolio, capacity, tradeoffs</small></span>\n                  </a>\n                  <a class=\"question-map-link\" href=\"#q-19-you-have-not-formally-managed-direct-reports-why\" data-question-link=\"q-19-you-have-not-formally-managed-direct-reports-why\">\n                    <span class=\"question-map-number\">21</span>\n                    <span><b>Ready to manage</b><small>project leadership, coaching, formal gap</small></span>\n                  </a>\n                  <a class=\"question-map-link\" href=\"#q-21-what-would-your-first-90-days-look-like\" data-question-link=\"q-21-what-would-your-first-90-days-look-like\">\n                    <span class=\"question-map-number\">23</span>\n                    <span><b>First 90 days</b><small>listen, audit, playbook</small></span>\n                  </a>\n                  <a class=\"question-map-link\" href=\"#q-22-how-would-you-transition-from-peer-to-manager-es\" data-question-link=\"q-22-how-would-you-transition-from-peer-to-manager-es\">\n                    <span class=\"question-map-number\">24</span>\n                    <span><b>Peer to manager</b><small>respect, fairness, comms specialist</small></span>\n                  </a>\n                </div>\n              </section>\n              <section class=\"question-map-group\">\n                <h3>Learning strategy</h3>\n                <div class=\"question-map-list\">\n                  <a class=\"question-map-link\" href=\"#q-23-how-do-you-define-and-measure-speed-to-proficien\" data-question-link=\"q-23-how-do-you-define-and-measure-speed-to-proficien\">\n                    <span class=\"question-map-number\">25</span>\n                    <span><b>Speed to proficiency</b><small>independent performance, standards, 3E</small></span>\n                  </a>\n                </div>\n              </section>\n            </div>\n          </div>\n        "
     },
     {
       "id": "guide-closing-questions",
@@ -296,9 +296,65 @@ window.INTERVIEW_DATA = {
       "cueScript": "My proudest achievement is Engage and Connect, | an in-house communication skills program at Thomson Reuters.\n\nThe company was paying about $200,000 a year for a vendor program, | but the content felt disconnected from the work. || It taught broad concepts such as probing and empathy. || What it did not show | was how those behaviors connected to product-specific troubleshooting and resolution.\n\nI led the work | across most of the lifecycle. || I conducted the analysis and designed the 15-hour curriculum. || I developed the e-learning, | created the communication materials, | supported the rollout, | and helped evaluate the results. || Another designer developed the instructor-led components, | and we worked with trainers and US colleagues through several rounds of review.\n\nThe program replaced the vendor content and received an average learner rating of 9.2 out of 10 from more than 200 participants. || We also saw improvements in probing and first-call resolution. || A comparison within the same business segment showed roughly a 7% CSAT improvement 30 days after training, | based on the internal report.\n\nThe part I am proudest of is proving to myself that I could lead the whole cycle. || New projects can begin with a lot of ambiguity. || That experience gave me a repeatable way to move from a business problem | to a solution, | adoption plan, | and measurable result."
     },
     {
-      "id": "q-05-tell-me-about-a-high-stakes-change-where-you-led",
+      "id": "q-optum-ai-generated-rise-code-innovation",
       "type": "question",
       "number": 5,
+      "group": "impact",
+      "question": "Tell me about an innovation you introduced at Optum.",
+      "competency": "Innovation, adoption, AI enablement, communication strategy",
+      "script": "One Optum achievement I am proud of is introducing a practical way for designers to use AI-generated code inside Articulate Rise. Rise released a code block feature, but almost nobody on the team was using it. Nobody asked me to build anything around it; I just saw the potential. I know enough programming to understand what was possible, and AI made the barrier much lower for designers who do not code.\n\nThe idea was simple: instead of building every complex interaction in Storyline, designers could describe the interaction they wanted, use a reusable prompt, and generate HTML-based activities directly inside Rise. It would not replace judgment or QA, but it could significantly shorten development time for certain interactions.\n\nI developed the prompt, tested it with a few teammates, improved it based on where they struggled, and created a Rise guide with examples. I tested the guide again with more designers, then launched the approach through email communication, a walkthrough, and distribution of the guide. I focused the message on practical use: you do not need to become a programmer; you need to know how to describe the activity well and review the output carefully.\n\nThe response was strong. People found it useful and relevant because it solved a real development problem. Eventually, I was also tapped by the global instructional design community to share the approach because it had value for other designers too.\n\nTwo months later, we had a follow-up session led by another instructional designer focused on editing and improving the generated code. In that session, a poll showed that a majority of responding designers were already using AI-generated code in their Rise projects to some extent.\n\nWhat I like about that story is that it shows the kind of impact I want to keep creating. I saw a capability before it was mainstream on the team, turned it into a repeatable method, communicated it clearly, and helped other designers adopt it in their own work.",
+      "points": [
+        "Optum achievement: AI-generated code for Articulate Rise",
+        "Self-initiated: saw unused Rise code block feature and connected it to AI + programming knowledge",
+        "Built reusable prompt, tested with teammates, improved based on confusion",
+        "Created Rise guide with examples and tested it again",
+        "Launched through email, walkthrough, and guide distribution",
+        "Positioning: designers do not need to code; they need to describe and review well",
+        "Shared through the global ID community because it had value for other designers; follow-up poll showed majority of respondents used it",
+        "Impact: repeatable method, faster development, broader AI adoption"
+      ],
+      "note": "Keep the story grounded in adoption and enablement. Do not oversell exact time savings unless asked; say it significantly shortened development for suitable interactions.",
+      "followUps": [
+        {
+          "question": "How did you get designers who do not code to try it?",
+          "points": [
+            "I removed the intimidation factor by focusing on examples, not programming theory.",
+            "The message was: describe the activity clearly, use the prompt, then review the output.",
+            "I tested with early adopters first, improved the guide, then launched it more broadly."
+          ]
+        },
+        {
+          "question": "How did you measure adoption or success?",
+          "points": [
+            "I used feedback from early testers, survey reactions after launch, the global ID community invitation, and a follow-up poll two months later.",
+            "The poll showed a majority of responding designers were using AI-generated code in Rise to some extent.",
+            "I would frame that as a strong adoption signal, not a formal productivity study."
+          ]
+        },
+        {
+          "question": "What risks did you manage with AI-generated code?",
+          "points": [
+            "I made it clear that AI output still needs review, testing, and accessibility checks.",
+            "The guide gave examples so designers had a safer starting point instead of prompting from scratch.",
+            "The goal was to accelerate development while preserving instructional and quality judgment."
+          ]
+        }
+      ],
+      "keywords": [
+        "innovation",
+        "AI",
+        "Rise",
+        "code block",
+        "prompt",
+        "adoption",
+        "Optum"
+      ],
+      "cueScript": "One Optum achievement I am proud of | is introducing a practical way for designers to use AI-generated code inside Articulate Rise. || Rise released a code block feature, | but almost nobody on the team was using it. || Nobody asked me to build anything around it; | I just saw the potential. || I know enough programming to understand what was possible, | and AI made the barrier much lower for designers who do not code.\n\nThe idea was simple: | instead of building every complex interaction in Storyline, | designers could describe the interaction they wanted, | use a reusable prompt, | and generate HTML-based activities directly inside Rise. || It would not replace judgment or QA, | but it could significantly shorten development time for certain interactions.\n\nI developed the prompt, | tested it with a few teammates, | improved it based on where they struggled, | and created a Rise guide with examples. || I tested the guide again with more designers, | then launched the approach through email communication, | a walkthrough, | and distribution of the guide. || I focused the message on practical use: | you do not need to become a programmer; | you need to know how to describe the activity well | and review the output carefully.\n\nThe response was strong. || People found it useful and relevant | because it solved a real development problem. || Eventually, | I was also tapped by the global instructional design community | to share the approach | because it had value for other designers too.\n\nTwo months later, | we had a follow-up session led by another instructional designer | focused on editing and improving the generated code. || In that session, | a poll showed that a majority of responding designers were already using AI-generated code in their Rise projects | to some extent.\n\nWhat I like about that story | is that it shows the kind of impact I want to keep creating. || I saw a capability before it was mainstream on the team, | turned it into a repeatable method, | communicated it clearly, | and helped other designers adopt it in their own work."
+    },
+    {
+      "id": "q-05-tell-me-about-a-high-stakes-change-where-you-led",
+      "type": "question",
+      "number": 6,
       "group": "impact",
       "question": "Tell me about a high-stakes change where you led the communication strategy.",
       "competency": "Strategic communications, change adoption, measurement",
@@ -351,7 +407,7 @@ window.INTERVIEW_DATA = {
     {
       "id": "q-06-describe-a-complex-project-involving-many-stakeh",
       "type": "question",
-      "number": 6,
+      "number": 7,
       "group": "stakeholders",
       "question": "Describe a complex project involving many stakeholders.",
       "competency": "Project management, stakeholder influence, technical learning",
@@ -405,7 +461,7 @@ window.INTERVIEW_DATA = {
     {
       "id": "q-07-tell-me-about-a-time-you-faced-resistance-or-dis",
       "type": "question",
-      "number": 7,
+      "number": 8,
       "group": "stakeholders",
       "question": "Tell me about a time you faced resistance or disagreement.",
       "competency": "Influence, conflict management, prototyping",
@@ -457,7 +513,7 @@ window.INTERVIEW_DATA = {
     {
       "id": "q-08-tell-me-about-a-time-you-received-unexpected-or-",
       "type": "question",
-      "number": 8,
+      "number": 9,
       "group": "stakeholders",
       "question": "Tell me about a time you received unexpected or difficult feedback.",
       "competency": "Adaptability, listening, composure",
@@ -510,7 +566,7 @@ window.INTERVIEW_DATA = {
     {
       "id": "q-09-tell-me-about-a-time-you-failed",
       "type": "question",
-      "number": 9,
+      "number": 10,
       "group": "growth",
       "question": "Tell me about a time you failed.",
       "competency": "Accountability, learning, adoption thinking",
@@ -563,7 +619,7 @@ window.INTERVIEW_DATA = {
     {
       "id": "q-10-what-is-your-biggest-weakness",
       "type": "question",
-      "number": 10,
+      "number": 11,
       "group": "growth",
       "question": "What is your biggest weakness?",
       "competency": "Self-awareness, delegation, management readiness",
@@ -613,9 +669,62 @@ window.INTERVIEW_DATA = {
       "cueScript": "One weakness I've had to work on | is taking over when a deliverable falls below my standards. || I care a lot about quality. || Even when a stakeholder asks for a draft, | mine is usually close to polished | because I want the idea to be easy to understand and support.\n\nEarlier in my career, | when a colleague produced weak work, | I sometimes redid it myself. || That protected the deadline, | but it did not develop the person. || It also made me the bottleneck. || AI can make that tendency worse | because it is now easy for me to scale my own output quickly.\n\nI've changed how I handle that. || On a recent urgent Optum project, | I created the course structure, | a Rise template, | written instructions, | examples, | a tracker, | and early checkpoints. || I assigned work based on each designer's familiarity with the topic. || When one person raised a capacity concern, | I rebalanced the work instead of taking over. || There were still gaps, | but I handled them through feedback.\n\nMy standards haven't changed. || What has changed | is that I make them visible early, | coach against them, | and hold people accountable before I step in."
     },
     {
+      "id": "q-what-would-you-do-if-you-do-not-get-this-role",
+      "type": "question",
+      "number": 12,
+      "group": "growth",
+      "question": "What would you do if you do not get this role?",
+      "competency": "Resilience, maturity, internal commitment",
+      "script": "First, I would be disappointed, because I genuinely want this role. It brings together the work I care about: communication, instructional design, adoption, and developing people.\n\nIf the decision goes another way, I would ask for feedback, thank the hiring team, and stay fully committed to the work I am already doing at Optum. This is still an organization I believe in. I would keep building the relationships, credibility, and capability that made me interested in the role in the first place.\n\nI would also treat the decision as useful data. If the gap is formal communications leadership, people management, or a specific skill, I would build a development plan around it. My goal would not be to disappear or disengage. It would be to keep contributing, keep growing, and be ready when the next opportunity comes.",
+      "points": [
+        "Acknowledge honest disappointment without sounding wounded",
+        "Ask for feedback and thank the hiring team",
+        "Stay committed to Optum and current work",
+        "Keep building relationships, credibility, and capability",
+        "Treat the decision as development data",
+        "Close: keep contributing and be ready for the next opportunity"
+      ],
+      "note": "Keep this short and sincere. The point is emotional maturity, not a campaign speech.",
+      "followUps": [
+        {
+          "question": "Would you be comfortable working with whoever gets the role?",
+          "points": [
+            "Yes. I would respect the decision and support the person selected.",
+            "The work still matters, and I would not let disappointment affect collaboration.",
+            "I would focus on being useful, honest, and professional."
+          ]
+        },
+        {
+          "question": "What feedback would you ask for?",
+          "points": [
+            "I would ask what gap mattered most in the decision.",
+            "I would want specific examples, not just general advice.",
+            "Then I would translate that feedback into a development plan."
+          ]
+        },
+        {
+          "question": "Would you apply again in the future?",
+          "points": [
+            "Yes, if the role and timing still made sense.",
+            "I would use the feedback to become a stronger candidate.",
+            "I would continue showing readiness through the work I already own."
+          ]
+        }
+      ],
+      "keywords": [
+        "rejection",
+        "not selected",
+        "role",
+        "resilience",
+        "commitment",
+        "Optum"
+      ],
+      "cueScript": "First, | I would be disappointed, | because I genuinely want this role. || It brings together the work I care about: | communication, | instructional design, | adoption, | and developing people.\n\nIf the decision goes another way, | I would ask for feedback, | thank the hiring team, | and stay fully committed to the work I am already doing at Optum. || This is still an organization I believe in. || I would keep building the relationships, | credibility, | and capability that made me interested in the role in the first place.\n\nI would also treat the decision as useful data. || If the gap is formal communications leadership, | people management, | or a specific skill, | I would build a development plan around it. || My goal would not be to disappear or disengage. || It would be to keep contributing, | keep growing, | and be ready when the next opportunity comes."
+    },
+    {
       "id": "q-11-how-do-you-prioritize-competing-tasks",
       "type": "question",
-      "number": 11,
+      "number": 13,
       "group": "delivery",
       "question": "How do you prioritize competing tasks?",
       "competency": "Judgment, portfolio management, stakeholder communication",
@@ -667,7 +776,7 @@ window.INTERVIEW_DATA = {
     {
       "id": "q-12-tell-me-about-a-time-you-allocated-work-and-led-",
       "type": "question",
-      "number": 12,
+      "number": 14,
       "group": "delivery",
       "question": "Tell me about a time you allocated work and led delivery without formal authority.",
       "competency": "Informal people leadership, planning, execution",
@@ -720,7 +829,7 @@ window.INTERVIEW_DATA = {
     {
       "id": "q-13-tell-me-about-a-time-you-coached-someone-and-imp",
       "type": "question",
-      "number": 13,
+      "number": 15,
       "group": "people",
       "question": "Tell me about a time you coached someone and improved the quality of their work.",
       "competency": "Coaching, audience focus, quality leadership",
@@ -773,7 +882,7 @@ window.INTERVIEW_DATA = {
     {
       "id": "q-14-how-would-you-handle-an-employee-who-repeatedly-",
       "type": "question",
-      "number": 14,
+      "number": 16,
       "group": "people",
       "question": "How would you handle an employee who repeatedly missed quality standards?",
       "competency": "Accountability, performance management, fairness",
@@ -826,7 +935,7 @@ window.INTERVIEW_DATA = {
     {
       "id": "q-15-what-is-your-leadership-philosophy",
       "type": "question",
-      "number": 15,
+      "number": 17,
       "group": "people",
       "question": "What is your leadership philosophy?",
       "competency": "Leadership identity, autonomy, accountability",
@@ -878,7 +987,7 @@ window.INTERVIEW_DATA = {
     {
       "id": "q-16-how-would-you-build-a-communication-strategy-for",
       "type": "question",
-      "number": 16,
+      "number": 18,
       "group": "communications",
       "question": "How would you build a communication strategy for a major organizational change?",
       "competency": "Communication planning, audience analysis, channel strategy",
@@ -931,7 +1040,7 @@ window.INTERVIEW_DATA = {
     {
       "id": "q-17-how-do-you-measure-communication-effectiveness",
       "type": "question",
-      "number": 17,
+      "number": 19,
       "group": "communications",
       "question": "How do you measure communication effectiveness?",
       "competency": "Measurement, analytics, continuous improvement",
@@ -985,7 +1094,7 @@ window.INTERVIEW_DATA = {
     {
       "id": "q-18-how-would-you-forecast-resources-and-manage-a-mi",
       "type": "question",
-      "number": 18,
+      "number": 20,
       "group": "management",
       "question": "How would you forecast resources and manage a mixed portfolio of communications and learning work?",
       "competency": "Resource forecasting, portfolio operations, transparency",
@@ -1040,7 +1149,7 @@ window.INTERVIEW_DATA = {
     {
       "id": "q-19-you-have-not-formally-managed-direct-reports-why",
       "type": "question",
-      "number": 19,
+      "number": 21,
       "group": "management",
       "question": "You have not formally managed direct reports. Why are you ready for a Senior Manager role?",
       "competency": "Management readiness, humility, transferable leadership",
@@ -1091,7 +1200,7 @@ window.INTERVIEW_DATA = {
     {
       "id": "q-20-how-would-you-communicate-across-cultures-shifts",
       "type": "question",
-      "number": 20,
+      "number": 22,
       "group": "communications",
       "question": "How would you communicate across cultures, shifts, roles, and different levels of technical knowledge?",
       "competency": "Inclusive communication, global collaboration, accessibility",
@@ -1147,7 +1256,7 @@ window.INTERVIEW_DATA = {
     {
       "id": "q-21-what-would-your-first-90-days-look-like",
       "type": "question",
-      "number": 21,
+      "number": 23,
       "group": "management",
       "question": "What would your first 90 days look like?",
       "competency": "Strategic entry plan, listening, execution",
@@ -1200,7 +1309,7 @@ window.INTERVIEW_DATA = {
     {
       "id": "q-22-how-would-you-transition-from-peer-to-manager-es",
       "type": "question",
-      "number": 22,
+      "number": 24,
       "group": "management",
       "question": "How would you transition from peer to manager, especially if a colleague also wanted the role?",
       "competency": "Trust, fairness, political judgment",
@@ -1253,7 +1362,7 @@ window.INTERVIEW_DATA = {
     {
       "id": "q-23-how-do-you-define-and-measure-speed-to-proficien",
       "type": "question",
-      "number": 23,
+      "number": 25,
       "group": "learning",
       "question": "How do you define and measure speed to proficiency?",
       "competency": "Learning strategy, operational measurement, performance consulting",
