@@ -23,13 +23,13 @@
     points: document.getElementById("talking-points"),
     script: document.getElementById("full-script"),
     followUps: document.getElementById("follow-up-list"),
-    followUpCount: document.getElementById("follow-up-count"),
     coachNote: document.getElementById("coach-note"),
     coachNoteBox: document.querySelector(".coach-note"),
     answerTabs: document.getElementById("answer-tabs"),
     guidePage: document.getElementById("guide-page"),
     answerHeading: document.querySelector(".answer-heading"),
     answerPanel: document.getElementById("answer-panel"),
+    questionsMapButton: document.getElementById("questions-map-button"),
     cueToggle: document.getElementById("cue-toggle"),
     copyButton: document.getElementById("copy-button"),
     focusToggle: document.getElementById("focus-toggle"),
@@ -151,7 +151,6 @@
         <ul>${followUp.points.map((point) => `<li>${escapeHtml(point)}</li>`).join("")}</ul>
       </div>
     `).join("");
-    elements.followUpCount.textContent = question.followUps.length;
     elements.coachNote.textContent = question.note;
 
     history.replaceState(null, "", `#${question.id}`);
@@ -370,6 +369,9 @@
   }
 
   function guideIcon(name) {
+    if (name === "questions") {
+      return '<svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9.75 9.25a2.45 2.45 0 0 1 4.75.85c0 1.65-1.3 2.15-2.1 2.75-.55.4-.65.75-.65 1.4"/><path d="M12 17.2h.01"/></svg>';
+    }
     if (name === "grid") {
       return '<svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 5h5v5H5zM14 5h5v5h-5zM5 14h5v5H5zM14 14h5v5h-5z"/><path d="M10 7.5h4M7.5 10v4M16.5 10v4M10 16.5h4"/></svg>';
     }
@@ -403,6 +405,14 @@
     elements.tabs.forEach((tab) => {
       tab.addEventListener("click", () => activateTab(tab.id.replace("-tab", "")));
     });
+    elements.guidePage.addEventListener("click", (event) => {
+      const link = event.target.closest("[data-question-link]");
+      if (!link) return;
+
+      event.preventDefault();
+      selectQuestion(link.dataset.questionLink);
+    });
+    elements.questionsMapButton.addEventListener("click", () => selectQuestion("guide-questions-map"));
     elements.copyButton.addEventListener("click", copyCurrentNotes);
     elements.cueToggle.addEventListener("click", toggleDeliveryCues);
     elements.focusToggle.addEventListener("click", toggleFocusMode);

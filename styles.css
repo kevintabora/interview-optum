@@ -975,6 +975,95 @@ button:focus-visible {
   color: var(--blue-700);
 }
 
+.questions-map-page {
+  max-width: 1120px;
+}
+
+.question-map-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 28px;
+}
+
+.question-map-group {
+  padding: 18px;
+  background: var(--white);
+  border: 1px solid var(--slate-200);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 8px 26px rgba(16, 42, 67, 0.045);
+}
+
+.question-map-group h3 {
+  margin: 0 0 12px;
+  color: var(--blue-700);
+  font-size: 0.82rem;
+  font-weight: 850;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.question-map-list {
+  display: grid;
+  gap: 8px;
+}
+
+.question-map-link {
+  display: grid;
+  grid-template-columns: 42px minmax(0, 1fr);
+  gap: 11px;
+  align-items: center;
+  padding: 11px 12px;
+  color: var(--slate-700);
+  background: var(--slate-50);
+  border: 1px solid var(--slate-200);
+  border-radius: 12px;
+  text-decoration: none;
+  transition: transform 0.16s ease, border-color 0.16s ease, box-shadow 0.16s ease, background 0.16s ease;
+}
+
+.question-map-link:hover {
+  background: var(--white);
+  border-color: #efbca8;
+  box-shadow: 0 8px 20px rgba(224, 82, 44, 0.08);
+  transform: translateY(-1px);
+}
+
+.question-map-link:focus-visible {
+  outline: 3px solid rgba(224, 82, 44, 0.2);
+  outline-offset: 2px;
+}
+
+.question-map-number {
+  display: grid;
+  width: 34px;
+  height: 34px;
+  place-items: center;
+  color: var(--orange-600);
+  background: var(--orange-100);
+  border-radius: 10px;
+  font-size: 0.76rem;
+  font-weight: 900;
+}
+
+.question-map-link b,
+.question-map-link small {
+  display: block;
+}
+
+.question-map-link b {
+  color: var(--navy-900);
+  font-size: 0.94rem;
+  line-height: 1.25;
+}
+
+.question-map-link small {
+  margin-top: 2px;
+  color: var(--slate-600);
+  font-size: 0.78rem;
+  line-height: 1.35;
+}
+
 .frameworks-page {
   max-width: 1040px;
 }
@@ -1252,6 +1341,10 @@ button:focus-visible {
     grid-template-columns: minmax(0, 1.65fr) minmax(230px, 1fr);
     gap: 24px;
   }
+
+  .question-map-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 @media (max-width: 760px) {
@@ -1339,6 +1432,7 @@ button:focus-visible {
   }
 
   .framework-map,
+  .question-map-grid,
   .paces-card,
   .framework-relationship-notes {
     grid-template-columns: 1fr;
