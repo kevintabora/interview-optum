@@ -22,6 +22,7 @@
     competency: document.getElementById("question-competency"),
     points: document.getElementById("talking-points"),
     script: document.getElementById("full-script"),
+    optionalNotes: document.getElementById("optional-notes"),
     followUps: document.getElementById("follow-up-list"),
     coachNote: document.getElementById("coach-note"),
     coachNoteBox: document.querySelector(".coach-note"),
@@ -142,6 +143,7 @@
     elements.competency.textContent = question.competency;
     elements.points.innerHTML = question.points.map((point) => `<li>${escapeHtml(point)}</li>`).join("");
     elements.script.innerHTML = renderScript(question.script);
+    renderOptionalNotes(question.optionalNotes || []);
     elements.followUps.innerHTML = question.followUps.map((followUp, index) => `
       <div class="follow-up-card">
         <div class="follow-up-heading">
@@ -168,6 +170,23 @@
       panel.classList.remove("active");
     });
     elements.guidePage.innerHTML = page.html;
+  }
+
+  function renderOptionalNotes(notes) {
+    elements.optionalNotes.hidden = !notes.length;
+    elements.optionalNotes.innerHTML = notes.map((note) => `
+      <aside class="optional-note-card">
+        <p class="optional-note-label">${escapeHtml(note.label || "If probed")}</p>
+        <div class="optional-note-script">${renderOptionalNoteText(note.text)}</div>
+      </aside>
+    `).join("");
+  }
+
+  function renderOptionalNoteText(text) {
+    return text
+      .split(/\n\n+/)
+      .map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`)
+      .join("");
   }
 
   function bindNavigation() {
@@ -377,6 +396,9 @@
     }
     if (name === "chat") {
       return '<svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 5h14v10H9l-4 4V5Z"/><path d="M8 9h8M8 12h5"/></svg>';
+    }
+    if (name === "flag") {
+      return '<svg aria-hidden="true" viewBox="0 0 24 24"><path d="M6 21V4"/><path d="M6 4h11l-2 4 2 4H6"/></svg>';
     }
     if (name === "compass") {
       return '<svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="m15.5 8.5-2 5-5 2 2-5 5-2Z"/></svg>';
