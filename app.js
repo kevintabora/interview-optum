@@ -1,10 +1,20 @@
 (function () {
   "use strict";
 
-  const data = window.INTERVIEW_DATA;
+  const roles = window.INTERVIEW_ROLES || [{
+    id: "senior-manager",
+    label: "Senior Manager",
+    title: "Senior Manager",
+    positioning: "Communication + learning + measurement",
+    theme: "senior-manager",
+    data: window.INTERVIEW_DATA,
+  }];
+  let data = roles[0].data;
   const CUE_STORAGE_KEY = "interviewGuideDeliveryCues";
+  const ROLE_STORAGE_KEY = "interviewGuideRole";
   const state = {
     selectedId: data.items[0].id,
+    roleId: roles[0].id,
     query: "",
     activeTab: "main-answer",
     focusedNavIndex: 0,
@@ -17,6 +27,9 @@
     search: document.getElementById("question-search"),
     clearSearch: document.getElementById("clear-search"),
     resultCount: document.getElementById("result-count"),
+    roleSelect: document.getElementById("role-select"),
+    roleTitle: document.getElementById("role-title"),
+    rolePositioning: document.getElementById("role-positioning"),
     title: document.getElementById("question-title"),
     meta: document.getElementById("question-meta"),
     competency: document.getElementById("question-competency"),
@@ -70,6 +83,10 @@
     return data.items.find((question) => question.id === state.selectedId) || data.items[0];
   }
 
+  function getCurrentRole() {
+    return roles.find((role) => role.id === state.roleId) || roles[0];
+  }
+
   function renderNavigation() {
     const visible = data.items.filter(matchesQuery);
     const visibleIds = new Set(visible.map((question) => question.id));
@@ -119,6 +136,44 @@
     }).join("");
 
     bindNavigation();
+  }
+
+  function renderRoleSelector() {
+    if (!elements.roleSelect) return;
+    elements.roleSelect.innerHTML = roles.map((role) => `
+      <option value="${escapeAttribute(role.id)}">${escapeHtml(role.label)}</option>
+    `).join("");
+    elements.roleSelect.value = state.roleId;
+    updateRoleChrome();
+  }
+
+  function updateRoleChrome() {
+    const role = getCurrentRole();
+    elements.body.dataset.role = role.theme || role.id;
+    if (elements.roleTitle) {
+      elements.roleTitle.textContent = role.title || role.label;
+    }
+    if (elements.rolePositioning) {
+      elements.rolePositioning.textContent = role.positioning || "";
+    }
+  }
+
+  function selectRole(roleId, preferredId) {
+    const role = roles.find((item) => item.id === roleId) || roles[0];
+    state.roleId = role.id;
+    data = role.data;
+    state.selectedId = preferredId && data.items.some((item) => item.id === preferredId)
+      ? preferredId
+      : data.items[0].id;
+    state.query = "";
+    elements.search.value = "";
+    storeRolePreference();
+    if (elements.roleSelect) {
+      elements.roleSelect.value = state.roleId;
+    }
+    updateRoleChrome();
+    activateTab(state.activeTab);
+    renderAnswer();
   }
 
   function renderAnswer() {
@@ -316,11 +371,34 @@
     }
   }
 
+  function storeRolePreference() {
+    try {
+      window.localStorage.setItem(ROLE_STORAGE_KEY, state.roleId);
+    } catch {
+      // Role switching still works for the current session if browser storage is unavailable.
+    }
+  }
+
   function loadCuePreference() {
     try {
       state.showCues = window.localStorage.getItem(CUE_STORAGE_KEY) === "on";
     } catch {
       state.showCues = false;
+    }
+  }
+
+  function loadRolePreference() {
+    try {
+      const storedRoleId = window.localStorage.getItem(ROLE_STORAGE_KEY);
+      if (roles.some((role) => role.id === storedRoleId)) {
+        state.roleId = storedRoleId;
+        data = getCurrentRole().data;
+        state.selectedId = data.items[0].id;
+      }
+    } catch {
+      state.roleId = roles[0].id;
+      data = roles[0].data;
+      state.selectedId = data.items[0].id;
     }
   }
 
@@ -408,12 +486,24 @@
 
   function initialize() {
     loadCuePreference();
+    loadRolePreference();
+    renderRoleSelector();
 
     const hashId = location.hash.slice(1);
-    if (data.items.some((question) => question.id === hashId)) {
+    const hashedRole = roles.find((role) => role.data.items.some((item) => item.id === hashId));
+    if (hashedRole) {
+      state.roleId = hashedRole.id;
+      data = hashedRole.data;
       state.selectedId = hashId;
+      if (elements.roleSelect) {
+        elements.roleSelect.value = state.roleId;
+      }
+      updateRoleChrome();
     }
 
+    elements.roleSelect?.addEventListener("change", (event) => {
+      selectRole(event.target.value);
+    });
     elements.search.addEventListener("input", (event) => {
       state.query = event.target.value;
       renderNavigation();

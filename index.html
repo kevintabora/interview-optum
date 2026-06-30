@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="color-scheme" content="light">
   <title>Interview Guide</title>
-  <link rel="stylesheet" href="styles.css?v=20260616-speech-cues">
+  <link rel="stylesheet" href="styles.css?v=20260629-role-switch">
 </head>
 <body>
   <a class="skip-link" href="#answer-panel">Skip to answer</a>
@@ -17,8 +17,15 @@
           <span class="brand-mark" aria-hidden="true">KT</span>
           <div>
             <p class="eyebrow">Interview command center</p>
-            <h1>Senior Manager</h1>
+            <h1 id="role-title">Senior Manager</h1>
           </div>
+        </div>
+
+        <div class="role-switch">
+          <label for="role-select">Role option</label>
+          <select id="role-select">
+            <option value="senior-manager">Senior Manager</option>
+          </select>
         </div>
 
         <div class="search-box">
@@ -63,7 +70,7 @@
 
         <div class="positioning">
           <span class="status-dot" aria-hidden="true"></span>
-          <span>Communication + learning + measurement</span>
+          <span id="role-positioning">Communication + learning + measurement</span>
         </div>
 
         <div class="topbar-actions">
@@ -158,6 +165,8 @@
   <div class="toast" id="toast" role="status" aria-live="polite">Copied to clipboard</div>
 
   <script src="data.js?v=20260616-speech-cues"></script>
-  <script src="app.js?v=20260616-speech-cues"></script>
+  <script src="pdc-questions.js?v=20260629-people-dev-qa"></script>
+  <script src="role-data.js?v=20260629-people-dev"></script>
+  <script src="app.js?v=20260629-roles"></script>
 </body>
 </html>
