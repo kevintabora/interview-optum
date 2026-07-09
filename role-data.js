@@ -53,30 +53,38 @@
       group: "start",
       navIcon: "chat",
       title: "Opening lines",
-      searchText: "Opening lines for People Development Consultant interview. Warm greeting, role interest, onboarding, coaching, performance consulting, people development.",
+      searchText: "Opening lines for People Development Consultant interview. Warm greeting, rescheduled interview joke, calendar changes, role interest, onboarding, coaching, performance consulting, people development.",
       html: `
         <div class="guide-strategy opening-lines-page">
           <h2>Opening lines</h2>
-          <p class="strategy-lead">Use these to begin calmly and steer the conversation toward the work that matters for this role: onboarding, capability building, coaching, and performance improvement.</p>
+          <p class="strategy-lead">Use these to begin naturally. If the schedule changes come up, acknowledge them lightly, then move back to the role.</p>
 
           <section class="opening-card opening-anchor-card">
             <p class="column-label orange">Simple default</p>
-            <blockquote>"Hi [Name], it is great to meet you. Thank you for making time. I have been looking forward to this conversation because the role connects a lot of the work I enjoy most: onboarding, coaching, facilitation, and helping people perform better in the role they were hired to do."</blockquote>
+            <blockquote>"Hi [Name], good to finally meet you. I'm glad we were able to find time today. I know schedules have been full, so I appreciate you making room for this conversation. I'm excited to talk because this role connects a lot of the work I enjoy: onboarding, coaching, facilitation, and helping people perform better in the role they were hired to do."</blockquote>
           </section>
 
           <div class="opening-line-grid">
             <section class="opening-card">
+              <h3>If you want the light joke</h3>
+              <ul>
+                <li>"I'm glad we finally get to connect. The calendar took the scenic route, but we made it."</li>
+                <li>"No worries at all about the reschedules. I know calendars can get crowded. I'm just glad we found the time."</li>
+              </ul>
+            </section>
+
+            <section class="opening-card">
               <h3>If they ask how you are</h3>
               <ul>
-                <li>"I'm doing well, thank you. A little excited, in a good way. I have been thinking through how my work in onboarding, performance support, and capability building connects to this role."</li>
-                <li>"I'm good, thank you. I appreciate the time. I am interested in learning more about what the team needs from this role and sharing where my experience fits."</li>
+                <li>"I'm doing well, thank you. I'm glad we finally get to have the conversation. I've been thinking through how my work in onboarding, performance support, and capability building connects to this role."</li>
+                <li>"I'm good, thank you. I appreciate you making time, especially with everything moving around. I'm looking forward to learning more about what the team needs from this role."</li>
               </ul>
             </section>
 
             <section class="opening-card">
               <h3>If the call starts directly</h3>
               <ul>
-                <li>"Absolutely. Before we begin, thank you again for the opportunity. I am ready whenever you are."</li>
+                <li>"Absolutely. Before we begin, thank you again for making the time. I am ready whenever you are."</li>
                 <li>"Sounds good. I am ready. I am especially interested in the role's connection to early talent development, onboarding, and broader people capability."</li>
               </ul>
             </section>
@@ -133,35 +141,31 @@
       group: "start",
       navIcon: "flag",
       title: "Post-interview questions",
-      searchText: "Questions to ask after People Development Consultant interview success 90 days early career development stakeholder partners measures coaching program portfolio.",
+      searchText: "Questions to ask after People Development Consultant interview early careers existing program stakeholders clients success measures role priorities why role is open sponsor first problems to solve.",
       html: `
         <div class="guide-strategy closing-questions">
           <h2>Post-interview questions</h2>
-          <p class="strategy-lead">Choose three based on what the interview has already covered. These should sound curious, not scripted.</p>
+          <p class="strategy-lead">Ask three to five depending on time. Prioritize the ones that help you understand the Early Careers system, the stakeholder map, and the real problem behind the opening.</p>
           <div class="closing-question-list">
             <article>
-              <h3>What would success look like after 90 days and after the first year?</h3>
-              <p><strong>Listen for:</strong> whether success is tied to programs delivered, stakeholder trust, measurable readiness, or broader talent outcomes.</p>
+              <h3>Is there already an existing Early Careers or talent-development program this role would support, or would the consultant be helping build parts of it from the ground up?</h3>
+              <p><strong>Listen for:</strong> existing program maturity, gaps in ownership, whether the work is maintenance, redesign, expansion, or new-build.</p>
             </article>
             <article>
-              <h3>Which talent or capability problems are most urgent for this role to help solve?</h3>
-              <p><strong>Listen for:</strong> early-career hiring, onboarding, manager support, retention, engagement, or inconsistent development experience.</p>
+              <h3>Who are the main stakeholders or internal clients for this role?</h3>
+              <p><strong>Listen for:</strong> Talent Acquisition, HRBPs, People Team leaders, operations leaders, hiring managers, program owners, schools, mentors, and participants.</p>
             </article>
             <article>
-              <h3>Who are the most important stakeholder groups this consultant will need to influence?</h3>
-              <p><strong>Listen for:</strong> Talent Acquisition, HRBPs, operations leaders, managers, program owners, and site leaders.</p>
+              <h3>What would success look like for this role in the first 6 to 12 months?</h3>
+              <p><strong>Listen for:</strong> readiness, speed to proficiency, manager confidence, participant experience, retention, mobility, stakeholder trust, or measurable program outcomes.</p>
             </article>
             <article>
-              <h3>How do you currently measure whether people-development programs are working?</h3>
-              <p><strong>Listen for:</strong> completion versus readiness, proficiency, retention, internal mobility, manager feedback, or business metrics.</p>
+              <h3>If I were selected for the role, what are the first problems you would want me to understand and help solve?</h3>
+              <p><strong>Listen for:</strong> the problems he mentally assigns to you, where he sees urgency, and whether your strengths in diagnosis, learning systems, coaching, and stakeholder support match the need.</p>
             </article>
             <article>
-              <h3>Where is the team already strong, and where would you want the new person to raise the standard?</h3>
-              <p><strong>Listen for:</strong> design, facilitation, program management, analytics, coaching, stakeholder consulting, or execution discipline.</p>
-            </article>
-            <article>
-              <h3>Is there anything in my background that you would like me to clarify before we finish?</h3>
-              <p><strong>Listen for:</strong> concerns about early-career hiring, People Team experience, SG28 readiness, or scope.</p>
+              <h3>What prompted the need for this role now?</h3>
+              <p><strong>Listen for:</strong> growth, backfill, new strategy, program expansion, capability gap, stakeholder demand, or a shift in how the team wants to support early-career and talent-development work.</p>
             </article>
           </div>
         </div>

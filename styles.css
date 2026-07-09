@@ -129,6 +129,11 @@ svg {
   gap: 13px;
 }
 
+.brand > div {
+  min-width: 0;
+  flex: 1;
+}
+
 .brand-mark {
   display: grid;
   width: 43px;
@@ -160,14 +165,17 @@ svg {
   letter-spacing: -0.025em;
 }
 
-.role-switch {
-  display: grid;
+.brand-role-row {
+  display: flex;
+  align-items: center;
   gap: 8px;
-  margin-top: 22px;
-  padding: 12px;
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: var(--radius-md);
+  min-width: 0;
+}
+
+.role-switch {
+  display: block;
+  min-width: 34px;
+  flex: 0 0 34px;
 }
 
 .role-switch label {
@@ -179,30 +187,29 @@ svg {
 }
 
 .role-switch select {
-  width: 100%;
-  min-height: 48px;
-  padding: 0 42px 0 13px;
+  width: 34px;
+  min-height: 32px;
+  padding: 0;
   color: var(--white);
   background:
-    linear-gradient(45deg, transparent 50%, #f1f6f8 50%) calc(100% - 21px) 21px / 7px 7px no-repeat,
-    linear-gradient(135deg, #f1f6f8 50%, transparent 50%) calc(100% - 16px) 21px / 7px 7px no-repeat,
-    rgba(255, 255, 255, 0.12);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 9px;
+    linear-gradient(45deg, transparent 50%, #f1f6f8 50%) calc(50% - 4px) 14px / 7px 7px no-repeat,
+    linear-gradient(135deg, #f1f6f8 50%, transparent 50%) calc(50% + 1px) 14px / 7px 7px no-repeat;
+  border: 0;
+  border-radius: 8px;
   outline: 0;
   appearance: none;
-  font-size: 0.86rem;
+  font-size: 0;
   font-weight: 700;
   line-height: 1.25;
   transition: background 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+  cursor: pointer;
 }
 
 .role-switch select:hover {
   background:
-    linear-gradient(45deg, transparent 50%, #ffffff 50%) calc(100% - 21px) 21px / 7px 7px no-repeat,
-    linear-gradient(135deg, #ffffff 50%, transparent 50%) calc(100% - 16px) 21px / 7px 7px no-repeat,
-    rgba(255, 255, 255, 0.16);
-  border-color: rgba(255, 255, 255, 0.28);
+    linear-gradient(45deg, transparent 50%, #ffffff 50%) calc(50% - 4px) 14px / 7px 7px no-repeat,
+    linear-gradient(135deg, #ffffff 50%, transparent 50%) calc(50% + 1px) 14px / 7px 7px no-repeat,
+    rgba(255, 255, 255, 0.1);
 }
 
 .role-switch select:focus-visible {
@@ -213,6 +220,7 @@ svg {
 .role-switch option {
   color: var(--white);
   background: var(--navy-950);
+  font-size: 0.86rem;
   font-weight: 700;
 }
 
@@ -691,7 +699,7 @@ kbd {
   counter-reset: point;
 }
 
-.talking-points li {
+.talking-points > li {
   position: relative;
   display: grid;
   min-height: 58px;
@@ -709,7 +717,7 @@ kbd {
   counter-increment: point;
 }
 
-.talking-points li::before {
+.talking-points > li::before {
   display: grid;
   width: 34px;
   height: 34px;
@@ -726,7 +734,7 @@ kbd {
   gap: 9px;
 }
 
-.talking-points.compact li {
+.talking-points.compact > li {
   min-height: 0;
   grid-template-columns: 30px minmax(0, 1fr);
   gap: 9px;
@@ -735,16 +743,21 @@ kbd {
   line-height: 1.42;
 }
 
-.talking-points.compact li::before {
+.talking-points.compact > li::before {
   width: 28px;
   height: 28px;
   border-radius: 7px;
   font-size: 0.65rem;
 }
 
-.script p {
+.script-section {
   max-width: 790px;
   margin: 0 0 1em;
+}
+
+.script p {
+  max-width: 790px;
+  margin: 0;
   color: #263743;
   font-size: clamp(1.02rem, 1.9vw, 1.14rem);
   line-height: 1.78;
@@ -753,7 +766,11 @@ kbd {
 .script-section-label {
   display: block;
   margin-bottom: 6px;
+  padding: 0;
   color: var(--orange-600);
+  background: transparent;
+  border: 0;
+  border-radius: 0;
   font-size: 0.72rem;
   font-weight: 850;
   letter-spacing: 0.08em;
@@ -950,7 +967,7 @@ body.focus-mode .answer-panel {
   width: min(1080px, calc(100% - 56px));
 }
 
-body.focus-mode .talking-points li {
+body.focus-mode .talking-points > li {
   font-size: 0.98rem;
 }
 
@@ -1180,13 +1197,13 @@ button:focus-visible {
   line-height: 1.45;
 }
 
-.talking-points li.structured-point {
+.talking-points > li.structured-point {
   grid-template-columns: 38px minmax(0, 1fr);
   align-items: start;
 }
 
-.talking-points li.structured-point .point-label,
-.talking-points li.structured-point .point-content {
+.talking-points > li.structured-point .point-label,
+.talking-points > li.structured-point .point-content {
   grid-column: 2;
 }
 
@@ -1205,6 +1222,31 @@ button:focus-visible {
   display: block;
   color: var(--navy-900);
   font-weight: 700;
+}
+
+.point-phrase-list {
+  display: grid;
+  gap: 5px;
+  grid-column: 2;
+  margin: 0;
+  padding: 0 0 0 18px;
+  list-style: disc;
+}
+
+.point-phrase-list li {
+  min-height: 0;
+  padding: 0;
+  color: var(--navy-900);
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  font-size: 0.86rem;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.point-phrase-list li::before {
+  display: none;
 }
 
 .questions-map-page {

@@ -274,11 +274,15 @@
     if (!match) {
       return `<li><span class="point-content">${escapeHtml(text)}</span></li>`;
     }
+    const phrases = match[2].split("|").map((item) => item.trim()).filter(Boolean);
+    const content = phrases.length > 1
+      ? `<ul class="point-phrase-list">${phrases.map((phrase) => `<li>${escapeHtml(phrase)}</li>`).join("")}</ul>`
+      : `<span class="point-content">${escapeHtml(match[2])}</span>`;
 
     return `
       <li class="structured-point">
         <span class="point-label">${escapeHtml(match[1])}</span>
-        <span class="point-content">${escapeHtml(match[2])}</span>
+        ${content}
       </li>
     `;
   }
@@ -308,7 +312,7 @@
       ? `${question.title}\n\n${question.searchText}`
       : state.activeTab === "follow-ups"
         ? `${question.question}\n\nLikely follow-ups:\n${question.followUps.map((item) => `${item.question}\n${item.points.map((point) => `- ${point}`).join("\n")}`).join("\n\n")}`
-        : `${question.question}\n\n${question.script}\n\nTalking points:\n${question.points.map((item) => `- ${item}`).join("\n")}`;
+        : `${question.question}\n\n${formatScriptForCopy(question.script)}\n\nTalking points:\n${question.points.map((item) => `- ${item}`).join("\n")}`;
 
     navigator.clipboard.writeText(content).then(() => {
       showToast("Copied to clipboard");
@@ -332,12 +336,26 @@
     const heading = lines.length > 1 && isScriptSectionLabel(lines[0]) ? lines.shift() : "";
     const body = lines.join("\n");
     const renderedBody = state.showCues ? renderCueParagraph(body) : escapeHtml(body).replace(/\n/g, "<br>");
-    const renderedHeading = heading ? `<span class="script-section-label">${escapeHtml(heading)}</span>` : "";
-    return `<p>${renderedHeading}${renderedBody}</p>`;
+    const renderedHeading = heading ? `<div class="script-section-label">${escapeHtml(heading)}</div>` : "";
+    return `<section class="script-section">${renderedHeading}<p>${renderedBody}</p></section>`;
+  }
+
+  function formatScriptForCopy(script) {
+    return String(script)
+      .split(/\n\n+/)
+      .map((paragraph) => {
+        const lines = paragraph.split(/\n/);
+        if (lines.length > 1 && isScriptSectionLabel(lines[0])) {
+          lines.shift();
+        }
+        return lines.join("\n").trim();
+      })
+      .filter(Boolean)
+      .join("\n\n");
   }
 
   function isScriptSectionLabel(value) {
-    return /^[A-Z][A-Za-z &]+$/.test(value.trim()) && value.trim().length <= 28;
+    return /^[A-Z][A-Za-z0-9 &-]+$/.test(value.trim()) && value.trim().length <= 28;
   }
 
   function renderCueParagraph(paragraph) {
