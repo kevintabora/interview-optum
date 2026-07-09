@@ -268,6 +268,11 @@
     window.scrollTo({ top: 0, behavior: "smooth" });
   }
 
+  function selectQuestionsMap() {
+    const questionsMap = data.items.find((item) => item.type === "guide" && item.title === "Questions map");
+    selectQuestion(questionsMap?.id || "guide-questions-map");
+  }
+
   function activateTab(name) {
     state.activeTab = name;
     elements.tabs.forEach((tab) => {
@@ -303,8 +308,21 @@
 
     return source
       .split(/\n\n+/)
-      .map((paragraph) => `<p>${state.showCues ? renderCueParagraph(paragraph) : escapeHtml(paragraph)}</p>`)
+      .map(renderScriptParagraph)
       .join("");
+  }
+
+  function renderScriptParagraph(paragraph) {
+    const lines = paragraph.split(/\n/);
+    const heading = lines.length > 1 && isScriptSectionLabel(lines[0]) ? lines.shift() : "";
+    const body = lines.join("\n");
+    const renderedBody = state.showCues ? renderCueParagraph(body) : escapeHtml(body).replace(/\n/g, "<br>");
+    const renderedHeading = heading ? `<span class="script-section-label">${escapeHtml(heading)}</span>` : "";
+    return `<p>${renderedHeading}${renderedBody}</p>`;
+  }
+
+  function isScriptSectionLabel(value) {
+    return /^[A-Z][A-Za-z &]+$/.test(value.trim()) && value.trim().length <= 28;
   }
 
   function renderCueParagraph(paragraph) {
@@ -524,7 +542,7 @@
       event.preventDefault();
       selectQuestion(link.dataset.questionLink);
     });
-    elements.questionsMapButton.addEventListener("click", () => selectQuestion("guide-questions-map"));
+    elements.questionsMapButton.addEventListener("click", selectQuestionsMap);
     elements.copyButton.addEventListener("click", copyCurrentNotes);
     elements.cueToggle.addEventListener("click", toggleDeliveryCues);
     elements.focusToggle.addEventListener("click", toggleFocusMode);

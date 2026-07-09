@@ -9,9 +9,11 @@
       group: "opening",
       question: "Tell me about yourself.",
       competency: "Career narrative, people-development fit, role positioning",
-      script: "I am a senior instructional designer at Optum. A lot of my work has been about helping operations teams perform better. That includes agents, pharmacy technicians, technical support analysts, trainers, and the supervisors who support the work after training.\n\nI started in teaching and facilitation, then moved into new-hire training and instructional design. At Alorica, I trained agents on communication and job readiness. At Thomson Reuters, I led learning projects for customer-support and technical-support teams. One of my strongest examples is Engage and Connect. We replaced a vendor communication program with an in-house program built around real customer scenarios. It included the main training program, train-the-trainer support, job aids for agents, and sessions with supervisors on how to coach their teams after training.\n\nI also help develop learning teams. I have onboarded and coached instructional designers, built QA standards, and at Optum I lead The Learning Studio. It is a monthly space where more than 100 learning professionals can share useful tools and practices.\n\nThe common thread is practical performance improvement. I look at what people need to do on the job, what gets in the way, and what support will help them perform with more confidence and consistency.",
+      script: "I am a senior instructional designer at Optum. I help analyze training needs and build blended learning for pharmacy technicians who process e-prescriptions. Right now, our goals include creating training materials for new tools and making training more efficient.\n\nThat current work fits a larger pattern in my career. A lot of my work has been about helping operations teams perform better. That includes agents, pharmacy technicians, technical support analysts, trainers, and the supervisors who support the work after training.\n\nI started in teaching and facilitation, then moved into new-hire training and instructional design. At Alorica, I trained agents on communication and job readiness. At Thomson Reuters, I led learning projects for customer-support and technical-support teams. One of my strongest examples is Engage and Connect. We replaced a vendor communication program with an in-house program built around real customer scenarios. It included the main training program, train-the-trainer support, job aids for agents, and sessions with supervisors on how to coach their teams after training.\n\nI also help develop learning teams. I have onboarded and coached instructional designers, built QA standards, and at Optum I lead The Learning Studio. It is a monthly space where more than 100 learning professionals can share useful tools and practices.\n\nThe common thread is practical performance improvement. I look at what people need to do on the job, what gets in the way, and what support will help them perform with more confidence and consistency.",
       points: [
         "Current role: senior instructional designer at Optum",
+        "Current work: analyze training needs and build blended learning for pharmacy technicians processing e-prescriptions",
+        "Current goals: train on new tools and make training more efficient",
         "Lead with operations: agents, technicians, analysts, trainers, supervisors",
         "Engage and Connect: training, T3, job aids, supervisor coaching",
         "Then support internal ID-team development: onboarding, coaching, QA, The Learning Studio",
@@ -78,7 +80,7 @@
       id: "pdc-q03-early-career-gap",
       type: "question",
       number: 3,
-      group: "talent",
+      group: "early-talent",
       question: "This role asks for early-career hiring and talent development experience. How does your background fit?",
       competency: "Honesty, adjacent experience, talent-development judgment",
       script: "I want to be clear about the distinction. I have not owned campus hiring, a graduate program, or formal conversations with graduating students about corporate careers. My experience is stronger after people enter the organization: onboarding, role readiness, coaching, and helping less-experienced employees become productive.\n\nThat experience is substantial. I taught college communication subjects for two and a half years, trained new hires at Alorica on communication and job readiness, built onboarding structure for instructional designers, and coached junior designers at Thomson Reuters and Optum.\n\nSo the gap is formal early-career hiring. The strength is development after selection: helping people understand the work, build confidence, use standards, practice safely, and reach productive performance. If the role includes campus hiring, I would need to learn that process. But once talent enters the pipeline, I have a lot of relevant experience helping people grow.",
@@ -114,7 +116,7 @@
       id: "pdc-q04-learning-studio",
       type: "question",
       number: 4,
-      group: "talent",
+      group: "capability",
       question: "Tell me about a people-development program or capability-building effort you led.",
       competency: "Program design, capability building, adoption",
       script: "The Learning Studio is my best example at Optum. We have more than 100 learning professionals across different lines of business. People were learning useful tools, methods, and shortcuts, but the expertise was scattered. There was no consistent place to share what people were learning.\n\nIn late 2025, I started sharing practical tools and techniques with the team. In 2026, I formally launched The Learning Studio as a monthly learning space for instructional designers and learning professionals. I also created a SharePoint site so resources could live somewhere after the session ended.\n\nThe sessions change each month, but the pattern is practical: show a useful technique, explain why it matters, let people see how it works, and give them something they can apply in their own projects. Participation averages around 70 percent of total headcount monthly, which tells me the sessions are useful enough for people to keep showing up.\n\nThe AI-generated Rise code session is the strongest example. I saw an underused feature, built a reusable prompt and guide, tested it with designers, launched it through a walkthrough and email, and later shared it with the global instructional design community. Two months later, another designer led a follow-up session, and a poll showed that a majority of responding designers were already using AI-generated code in Rise projects to some extent.",
@@ -231,7 +233,7 @@
       id: "pdc-q07-facilitation",
       type: "question",
       number: 7,
-      group: "facilitation",
+      group: "coaching",
       question: "Tell me about a session where you had to facilitate, not just present.",
       competency: "Facilitation, adult learning, workshop design",
       script: "At Thomson Reuters, I facilitated a three-day Articulate Rise training for trainers. They were already learning professionals, so I did not want to treat them like beginners. The goal was to help them move into course development and produce actual self-paced learning.\n\nI opened with a blank Word document. I told them that in training development, this is often the enemy. You know the topic, but the question is: what exactly do you put here? Then I showed a finished Rise course and framed the goal: we are going from this blank page to a deployable course.\n\nThe session was practice-heavy. They wrote objectives, identified content types, matched content to Rise elements, built a short 15-minute self-paced course, presented it, and critiqued each other's work. I used show-tell-do because adults need to see the value, not just hear it described.\n\nThe feedback was that the sessions were helpful and engaging. More importantly, most participants created courses that were uploaded to the LMS. So it did not stop at awareness. It helped trainers build a real design capability.",
@@ -305,7 +307,7 @@
       id: "pdc-q09-accessibility",
       type: "question",
       number: 9,
-      group: "inclusion",
+      group: "growth",
       question: "Tell me about a time you made development more accessible or equitable.",
       competency: "Inclusion, accessibility, learning from mistakes",
       script: "I learned this the hard way at Thomson Reuters. A learner sent us a long message because she could not use a mouse due to a physical condition, and one of my self-paced courses had drag-and-drop activities without a keyboard-accessible backup.\n\nShe was right to be upset. I had focused too much on the visual interaction and not enough on whether every learner could actually use it. That was a painful message to receive, but it changed how I thought about design quality.\n\nThe fix was not just to repair that one activity. I worked with the accessibility team and became much more disciplined about using accessibility guidelines. Since then, my design standard has been simple: match the design to the learning objective, match it to the learner's proficiency level, and always follow accessibility guidelines.\n\nA good learning activity is not good if part of the audience cannot use it. That lesson has stayed with me.",
@@ -378,7 +380,7 @@
       id: "pdc-q11-develop-early-career-talent",
       type: "question",
       number: 11,
-      group: "talent",
+      group: "early-talent",
       question: "How do you develop early-career talent?",
       competency: "Early-career development, onboarding, role readiness",
       script: "I would start by defining what early-career talent needs to become ready for, not just what content they need to complete. I would ask the business and managers what good performance looks like after 30, 60, and 90 days. Then I would identify the common failure points. Where do new hires usually get confused? Where do they lose confidence? Where do managers usually have to step in?\n\nMy direct experience is stronger in onboarding and development after selection than in campus hiring. That still connects to early-career development because new employees need structure after they enter the organization. I would build that structure through a clear onboarding path, examples of good work, realistic practice, job aids for repeat tasks, and coaching checkpoints with managers or mentors.\n\nI would also want a baseline for each person. What do they already know? What communication habits, work habits, or technical skills are already strong? What needs support? From there, the development plan can be more specific. For example, one person may need help with business writing, another may need confidence speaking with stakeholders, and another may need more practice using the tools. The goal is to move them toward independence, with feedback early enough that they can actually use it.",
@@ -471,15 +473,15 @@
   ];
 
   const reusableSeniorQuestions = [
-    { source: "What is your greatest professional achievement?", group: "talent" },
-    { source: "Tell me about an innovation you introduced at Optum.", group: "talent" },
-    { source: "Describe a complex project involving many stakeholders.", group: "performance" },
-    { source: "Tell me about a time you faced resistance or disagreement.", group: "performance" },
-    { source: "Tell me about a time you received unexpected or difficult feedback.", group: "readiness" },
-    { source: "Tell me about a time you failed.", group: "readiness" },
-    { source: "What is your biggest weakness?", group: "readiness" },
+    { source: "What is your greatest professional achievement?", group: "capability" },
+    { source: "Tell me about an innovation you introduced at Optum.", group: "capability" },
+    { source: "Describe a complex project involving many stakeholders.", group: "stakeholders" },
+    { source: "Tell me about a time you faced resistance or disagreement.", group: "stakeholders" },
+    { source: "Tell me about a time you received unexpected or difficult feedback.", group: "growth" },
+    { source: "Tell me about a time you failed.", group: "growth" },
+    { source: "What is your biggest weakness?", group: "growth" },
     { source: "What would you do if you do not get this role?", group: "readiness" },
-    { source: "How do you prioritize competing tasks?", group: "readiness" },
+    { source: "How do you prioritize competing tasks?", group: "stakeholders" },
     { source: "What is your leadership philosophy?", group: "readiness" },
     { source: "How do you define and measure speed to proficiency?", group: "performance" }
   ];
@@ -592,7 +594,7 @@
   }
 
   function finalizePeopleDevelopmentQuestions() {
-    const groupOrder = ["opening", "talent", "coaching", "facilitation", "performance", "inclusion", "readiness"];
+    const groupOrder = ["opening", "early-talent", "capability", "coaching", "performance", "stakeholders", "growth", "readiness"];
     let nextNumber = 1;
 
     groupOrder.forEach((groupId) => {
@@ -611,11 +613,87 @@
         nextNumber += 1;
       });
 
+    applyStructuredAnswerFormat();
+
     window.PEOPLE_DEVELOPMENT_QUESTIONS.forEach((question) => {
       if (question.script) {
         question.cueScript = createCueScript(question.script);
       }
     });
+  }
+
+  function applyStructuredAnswerFormat() {
+    const sectionLabels = {
+      "Tell me about yourself.": ["Current work", "Pattern", "Proof", "Team development", "Role fit"],
+      "Why do you want this People Development Consultant role now?": ["Core idea", "Current evidence", "Proof", "Role fit"],
+      "This role asks for early-career hiring and talent development experience. How does your background fit?": ["Honest bridge", "Proof", "Role fit"],
+      "How do you develop early-career talent?": ["Core idea", "Development model", "Individual baseline"],
+      "Tell me about a people-development program or capability-building effort you led.": ["Problem", "Build", "Operating model", "Adoption proof"],
+      "What is your greatest professional achievement?": ["Core idea", "Problem", "Build", "Result"],
+      "Tell me about an innovation you introduced at Optum.": ["Core idea", "Model", "Build", "Adoption proof", "Role fit"],
+      "Describe your coaching approach.": ["Core idea", "Coaching model", "Example", "Shift"],
+      "Tell me about a time you coached someone and helped them grow.": ["Context", "Coaching model", "Guidance", "Growth proof"],
+      "Tell me about a session where you had to facilitate, not just present.": ["Context", "Hook", "Workshop model", "Result"],
+      "Tell me about a time you discovered training was not the real solution.": ["Core idea", "Diagnosis", "Response", "Lesson"],
+      "How do you diagnose development needs?": ["Core idea", "Diagnostic model", "Proof", "Decision rule"],
+      "How do you use data and technology in people development?": ["Core idea", "Data signals", "Technology use"],
+      "How do you define and measure speed to proficiency?": ["Definition", "Measurement model", "Learning curve", "Proof"],
+      "Describe a complex project involving many stakeholders.": ["Context", "Solution", "Influence model", "Ease of contribution", "Result"],
+      "Tell me about a time you faced resistance or disagreement.": ["Context", "Shift", "Adoption move", "Lesson"],
+      "How do you prioritize competing tasks?": ["Decision lens", "Example", "Tradeoff", "Operating rule"],
+      "Tell me about a time you made development more accessible or equitable.": ["Context", "Accountability", "New standard", "Lesson"],
+      "Tell me about a time you received unexpected or difficult feedback.": ["Context", "Reset", "Outcome", "Lesson"],
+      "Tell me about a time you failed.": ["Context", "Miss", "Adoption gap", "Lesson"],
+      "What is your biggest weakness?": ["Core issue", "Risk", "Current practice", "Growth edge"],
+      "What would your first 90 days look like in this role?": ["Listen", "Diagnose", "Test", "Principle"],
+      "What would you do if you do not get this role?": ["Honest reaction", "Response", "Growth plan"],
+      "What is your leadership philosophy?": ["Core idea", "Context", "Role", "Accountability"],
+    };
+    const pointSummaries = {
+      "Tell me about yourself.": ["Current Optum work with pharmacy technicians and e-prescription training", "Career pattern is helping operations teams perform better", "Teaching, training, ID, and Engage and Connect prove the pattern", "You also develop learning teams through coaching, QA, and The Learning Studio", "People Development expands your performance improvement work"],
+      "Why do you want this People Development Consultant role now?": ["The role matches the broader performance system you now care about", "You already do onboarding, learning sessions, engagement, announcements, and site support", "The Learning Studio shows capability building beyond assigned projects", "SG28 is the right stretch because it needs judgment, influence, and independence"],
+      "This role asks for early-career hiring and talent development experience. How does your background fit?": ["Be clear about the formal campus hiring gap", "Use college teaching, Alorica new-hire training, and ID onboarding as proof", "Your strongest bridge is development after selection"],
+      "How do you develop early-career talent?": ["Define what readiness looks like after 30, 60, and 90 days", "Build the path with examples, practice, job aids, and manager or mentor checkpoints", "Use a baseline so development is specific to the person"],
+      "Tell me about a people-development program or capability-building effort you led.": ["The Learning Studio solved scattered expertise across 100 plus learning professionals", "You formalized monthly sessions and created a SharePoint resource hub", "Sessions are practical and built around application", "Participation and AI Rise adoption show usefulness"],
+      "What is your greatest professional achievement?": ["Engage and Connect was a capability-building project, not just a course", "Vendor content was costly and disconnected from product-specific work", "You built training, T3 support, job aids, rollout materials, and supervisor support", "Results included strong learner ratings and improved performance measures"],
+      "Tell me about an innovation you introduced at Optum.": ["You saw practical value in an underused Rise code feature", "Designers could use AI prompts without becoming programmers", "You tested, refined, documented, and launched the method", "Peer adoption and global sharing showed the idea had value", "This shows how you turn emerging tools into usable team capability"],
+      "Describe your coaching approach.": ["Understand before advising", "Calibrate support based on confidence, skill, judgment, clarity, or feedback", "Use The Learning Studio facilitator example", "Questioning first helped the facilitator shift from code lecture to practical demo"],
+      "Tell me about a time you coached someone and helped them grow.": ["3E gave a newer designer a complex project with real stretch", "You asked decision questions instead of simply marking up slides", "Coaching covered content logic, design precision, and Storyline capability", "Growth showed up when she needed less guidance on 3E Cloud"],
+      "Tell me about a session where you had to facilitate, not just present.": ["Audience was already experienced, so the session could not feel basic", "The blank document to finished Rise course created the hook", "The workshop used practice, critique, and a final build", "Participants created courses that went to the LMS"],
+      "Tell me about a time you discovered training was not the real solution.": ["Low CSAT looked like a communication issue at first", "Interviews showed the real issue was an effortful replacement process", "You created an empathetic script and raised the process issue", "CSAT improved, but the lesson was that training can only mitigate some process problems"],
+      "How do you diagnose development needs?": ["Diagnose the work before diagnosing the person", "Start with goal, behavior, and gap type", "Alorica Davao shows the difference between skill gap and process issue", "Training fits only when the gap is knowledge or skill"],
+      "How do you use data and technology in people development?": ["Use data to understand problems and check if solutions work", "Look at participation, adoption, feedback, and application stories", "Use technology to make work easier while keeping human judgment"],
+      "How do you define and measure speed to proficiency?": ["Speed to proficiency means sustained independent performance", "Define proficiency with business measures and duration", "Track milestones and look for where people stall", "Use 3E and Engage and Connect as proof"],
+      "Describe a complex project involving many stakeholders.": ["3E onboarding depended on many SMEs and had no dedicated trainer", "You proposed 21 scenario-based workbooks", "Influence came from leader buy-in, clear goal, and practical SME framing", "Templates, prototype, tracker, and reminders made contribution easier", "Result was all 21 modules and faster onboarding"],
+      "Tell me about a time you faced resistance or disagreement.": ["Engage and Connect had disagreement on outline and redundancy", "A prototype shifted the discussion from opinion to review", "You preserved useful vendor concepts while adding product-specific practice", "The lesson is to bring something concrete to react to"],
+      "How do you prioritize competing tasks?": ["Use impact, urgency, risk, dependencies, and deadline flexibility", "Project Nucleus had higher urgency than pharmacy content updates", "You used timeline flexibility without putting training at risk", "Make tradeoffs visible early when commitments are affected"],
+      "Tell me about a time you made development more accessible or equitable.": ["A learner complaint exposed an accessibility miss", "You owned that the drag-and-drop design excluded keyboard users", "Accessibility became part of your quality standard", "Good learning is not good if part of the audience cannot use it"],
+      "Tell me about a time you received unexpected or difficult feedback.": ["The job aid prototype received conflicting feedback", "You returned to audience, purpose, problem, and use case", "The second prototype clarified the requirement even when direction changed again", "The lesson is to avoid attachment to the first solution"],
+      "Tell me about a time you failed.": ["The interactive FAQ worked technically but was not adopted", "The miss was weak sponsorship and low SME commitment", "Deployment did not fit the workflow or provide usage data", "Now you confirm problem, sponsor, workflow fit, prototype, and adoption measures"],
+      "What is your biggest weakness?": ["You can take over when quality falls below your standard", "That protects deadlines but can create dependency", "You now make standards visible through templates, examples, trackers, and checkpoints", "The growth edge is holding standards while developing others"],
+      "What would your first 90 days look like in this role?": ["Listen and map the portfolio, stakeholders, pain points, and measures", "Look for patterns across hiring, onboarding, manager support, coaching, measurement, and alignment", "Test a practical improvement small enough to implement and useful enough to build trust", "Enter humbly, learn the system, and create early value"],
+      "What would you do if you do not get this role?": ["Be honest that you would be disappointed", "Ask for feedback and stay committed to Optum work", "Turn the decision into a development plan"],
+      "What is your leadership philosophy?": ["Context, not control", "People need the problem, outcome, constraints, and quality standard", "Your role is to create context, remove barriers, give feedback, and use others' expertise", "Accountability still needs owners, milestones, review points, and scaffolding"],
+    };
+
+    window.PEOPLE_DEVELOPMENT_QUESTIONS.forEach((question) => {
+      const labels = sectionLabels[question.question];
+      if (!labels || !question.script) return;
+
+      const paragraphs = question.script.split(/\n\n+/);
+      question.script = paragraphs
+        .map((paragraph, index) => `${labels[index] || "Additional proof"}\n${paragraph}`)
+        .join("\n\n");
+      const summaries = pointSummaries[question.question] || [];
+      question.points = paragraphs
+        .map((paragraph, index) => `${labels[index] || "Additional proof"} - ${summaries[index] || summarizeStructuredPoint(paragraph)}`);
+    });
+  }
+
+  function summarizeStructuredPoint(paragraph) {
+    const cleaned = paragraph.replace(/\s+/g, " ").trim();
+    const sentence = cleaned.match(/^(.+?[.!?])\s/)?.[1] || cleaned;
+    return sentence.length > 135 ? `${sentence.slice(0, 132).trim()}...` : sentence;
   }
 
   function createCueScript(script) {

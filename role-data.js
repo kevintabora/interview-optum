@@ -6,11 +6,12 @@
   const peopleDevelopmentGroups = [
     { id: "start", label: "Start here" },
     { id: "opening", label: "Opening and fit" },
-    { id: "talent", label: "Talent development" },
-    { id: "coaching", label: "Coaching" },
-    { id: "facilitation", label: "Facilitation" },
+    { id: "early-talent", label: "Early talent" },
+    { id: "capability", label: "Capability building" },
+    { id: "coaching", label: "Coaching and facilitation" },
     { id: "performance", label: "Performance consulting" },
-    { id: "inclusion", label: "Inclusion and access" },
+    { id: "stakeholders", label: "Stakeholders and delivery" },
+    { id: "growth", label: "Learning agility" },
     { id: "readiness", label: "SG28 readiness" },
   ];
 
@@ -196,7 +197,7 @@
   ];
 
   function buildQuestionsMap(items, labels) {
-    const groups = ["opening", "talent", "coaching", "facilitation", "performance", "inclusion", "readiness"];
+    const groups = ["opening", "early-talent", "capability", "coaching", "performance", "stakeholders", "growth", "readiness"];
 
     return `
       <div class="guide-strategy questions-map-page">
@@ -226,11 +227,34 @@
   }
 
   function shortQuestion(value) {
-    return value
-      .replace("This role asks for early-career hiring and talent development experience. How does your background fit?", "Early-career fit")
-      .replace("Tell me about a people-development program or capability-building effort you led.", "Capability-building program")
-      .replace("Tell me about a time you discovered training was not the real solution.", "Not a training problem")
-      .replace("How do you define and measure speed to proficiency?", "Speed to proficiency");
+    const labels = {
+      "Tell me about yourself.": "Career story",
+      "Why do you want this People Development Consultant role now?": "Why this role",
+      "This role asks for early-career hiring and talent development experience. How does your background fit?": "Early-career fit",
+      "How do you develop early-career talent?": "Early-career development",
+      "Tell me about a people-development program or capability-building effort you led.": "Learning Studio",
+      "What is your greatest professional achievement?": "Engage and Connect",
+      "Tell me about an innovation you introduced at Optum.": "AI Rise innovation",
+      "Describe your coaching approach.": "Coaching approach",
+      "Tell me about a time you coached someone and helped them grow.": "3E coaching",
+      "Tell me about a session where you had to facilitate, not just present.": "Rise workshop",
+      "Tell me about a time you discovered training was not the real solution.": "Not a training problem",
+      "How do you diagnose development needs?": "Diagnose needs",
+      "How do you use data and technology in people development?": "Data and AI",
+      "How do you define and measure speed to proficiency?": "Speed to proficiency",
+      "Describe a complex project involving many stakeholders.": "3E stakeholders",
+      "Tell me about a time you faced resistance or disagreement.": "Resistance",
+      "How do you prioritize competing tasks?": "Prioritization",
+      "Tell me about a time you made development more accessible or equitable.": "Accessibility lesson",
+      "Tell me about a time you received unexpected or difficult feedback.": "Difficult feedback",
+      "Tell me about a time you failed.": "Failed adoption",
+      "What is your biggest weakness?": "Taking over",
+      "What would your first 90 days look like in this role?": "First 90 days",
+      "What would you do if you do not get this role?": "If not selected",
+      "What is your leadership philosophy?": "Leadership philosophy",
+    };
+
+    return labels[value] || value;
   }
 
   function escapeHtml(value) {

@@ -750,6 +750,17 @@ kbd {
   line-height: 1.78;
 }
 
+.script-section-label {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--orange-600);
+  font-size: 0.72rem;
+  font-weight: 850;
+  letter-spacing: 0.08em;
+  line-height: 1.25;
+  text-transform: uppercase;
+}
+
 .delivery-cues-on .script p {
   line-height: 1.92;
 }
@@ -1176,6 +1187,7 @@ button:focus-visible {
 .question-map-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: start;
   gap: 14px;
   margin-top: 28px;
 }
