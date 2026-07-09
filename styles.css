@@ -1180,6 +1180,33 @@ button:focus-visible {
   line-height: 1.45;
 }
 
+.talking-points li.structured-point {
+  grid-template-columns: 38px minmax(0, 1fr);
+  align-items: start;
+}
+
+.talking-points li.structured-point .point-label,
+.talking-points li.structured-point .point-content {
+  grid-column: 2;
+}
+
+.point-label {
+  display: block;
+  margin-bottom: 3px;
+  color: var(--orange-600);
+  font-size: 0.68rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.point-content {
+  display: block;
+  color: var(--navy-900);
+  font-weight: 700;
+}
+
 .questions-map-page {
   max-width: 1120px;
 }

@@ -196,7 +196,7 @@
     elements.meta.textContent = `Question ${String(question.number).padStart(2, "0")} · ${group.label}`;
     elements.title.textContent = question.question;
     elements.competency.textContent = question.competency;
-    elements.points.innerHTML = question.points.map((point) => `<li>${escapeHtml(point)}</li>`).join("");
+    elements.points.innerHTML = question.points.map(renderTalkingPoint).join("");
     elements.script.innerHTML = renderScript(question.script);
     renderOptionalNotes(question.optionalNotes || []);
     elements.followUps.innerHTML = question.followUps.map((followUp, index) => `
@@ -266,6 +266,21 @@
     renderAnswer();
     closeMobileMenu();
     window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+
+  function renderTalkingPoint(point) {
+    const text = String(point);
+    const match = text.match(/^([^:–-]{2,32})\s[-:–]\s(.+)$/);
+    if (!match) {
+      return `<li><span class="point-content">${escapeHtml(text)}</span></li>`;
+    }
+
+    return `
+      <li class="structured-point">
+        <span class="point-label">${escapeHtml(match[1])}</span>
+        <span class="point-content">${escapeHtml(match[2])}</span>
+      </li>
+    `;
   }
 
   function selectQuestionsMap() {
