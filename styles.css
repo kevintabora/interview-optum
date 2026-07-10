@@ -568,6 +568,14 @@ kbd {
   outline: 0;
 }
 
+.answer-panel.wide-guide-panel {
+  width: min(1500px, calc(100% - 48px));
+}
+
+.answer-panel.question-map-guide-panel {
+  width: calc(100% - 48px);
+}
+
 .answer-heading {
   display: flex;
   align-items: flex-start;
@@ -1250,12 +1258,13 @@ button:focus-visible {
 }
 
 .questions-map-page {
-  max-width: 1120px;
+  max-width: none;
+  width: 100%;
 }
 
 .question-map-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(285px, 1fr));
   align-items: start;
   gap: 14px;
   margin-top: 28px;
@@ -1565,6 +1574,166 @@ button:focus-visible {
   font-size: 0.7rem;
   line-height: 1;
   white-space: nowrap;
+}
+
+.early-careers-framework-page {
+  max-width: 1500px;
+  width: 100%;
+}
+
+.early-journey-scroll {
+  margin-top: 18px;
+  padding-bottom: 8px;
+  overflow-x: auto;
+  scrollbar-color: var(--orange-600) var(--slate-100);
+}
+
+.early-journey-grid {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(194px, 1fr));
+  gap: 12px;
+  min-width: min(1430px, 100%);
+}
+
+.early-phase-card {
+  display: grid;
+  grid-template-rows: 118px repeat(5, minmax(148px, auto));
+  align-content: stretch;
+  gap: 9px;
+  padding: 14px;
+  background: var(--white);
+  border: 1px solid var(--slate-200);
+  border-radius: 14px;
+  box-shadow: 0 8px 24px rgba(16, 42, 67, 0.055);
+}
+
+.early-phase-card header {
+  min-height: 0;
+  padding: 14px;
+  color: var(--navy-900);
+  background: #f4faf7;
+  border: 1px solid var(--blue-100);
+  border-radius: 12px;
+}
+
+.early-phase-card header span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  color: var(--white);
+  background: var(--navy-900);
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 900;
+}
+
+.early-phase-card h3 {
+  margin: 12px 0 0;
+  color: var(--navy-900);
+  font-size: 1.05rem;
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+}
+
+.early-phase-card header p {
+  margin: 5px 0 0;
+  color: var(--slate-700);
+  font-size: 0.85rem;
+  font-weight: 800;
+}
+
+.role-event {
+  display: grid;
+  align-content: start;
+  gap: 5px;
+  padding: 10px 11px;
+  border: 1px solid transparent;
+  border-radius: 11px;
+}
+
+.role-event b {
+  color: var(--navy-900);
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.role-event span {
+  color: var(--slate-700);
+  font-size: 0.8rem;
+  line-height: 1.32;
+}
+
+.role-event.people-dev {
+  background: #e1f4ee;
+  border-color: #bee3d7;
+}
+
+.role-event.recruitment {
+  background: #fde6f2;
+  border-color: #efbed8;
+}
+
+.role-event.talent {
+  background: #e0f7fb;
+  border-color: #b8e4ec;
+}
+
+.role-event.buddy {
+  background: #eee8fb;
+  border-color: #d5c9ed;
+}
+
+.role-event.managers {
+  background: #ffe9d2;
+  border-color: #f5c99d;
+}
+
+.early-framework-note {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 14px;
+  align-items: start;
+  margin-top: 18px;
+  padding: 17px 18px;
+  background: var(--navy-900);
+  border-radius: var(--radius-md);
+}
+
+.early-framework-note strong {
+  color: var(--white);
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.early-framework-note span {
+  color: rgba(255, 255, 255, 0.86);
+  font-size: 0.9rem;
+  line-height: 1.48;
+}
+
+@media (max-width: 760px) {
+  .early-journey-grid {
+    grid-template-columns: repeat(7, minmax(220px, 1fr));
+    min-width: 1640px;
+  }
+
+  .early-phase-card {
+    grid-template-rows: 124px repeat(5, minmax(150px, auto));
+    padding: 11px;
+  }
+
+  .early-framework-note {
+    grid-template-columns: 1fr;
+  }
+
+  .early-framework-note strong {
+    white-space: normal;
+  }
 }
 
 .rhythm-grid {

@@ -179,6 +179,7 @@
   function renderAnswer() {
     const question = getSelected();
     const group = data.groups.find((item) => item.id === question.group);
+    elements.answerPanel.classList.remove("wide-guide-panel", "framework-guide-panel", "question-map-guide-panel");
 
     if (question.type === "guide") {
       renderGuidePage(question, group);
@@ -215,6 +216,11 @@
   }
 
   function renderGuidePage(page, group) {
+    const isFrameworkPage = page.id.includes("framework");
+    const isQuestionMapPage = page.id.includes("questions-map");
+    elements.answerPanel.classList.toggle("wide-guide-panel", isFrameworkPage || isQuestionMapPage);
+    elements.answerPanel.classList.toggle("framework-guide-panel", isFrameworkPage);
+    elements.answerPanel.classList.toggle("question-map-guide-panel", isQuestionMapPage);
     elements.answerHeading.hidden = true;
     elements.answerTabs.hidden = true;
     elements.coachNoteBox.hidden = true;

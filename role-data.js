@@ -127,6 +127,120 @@
       `,
     },
     {
+      id: "pdc-frameworks",
+      type: "guide",
+      group: "start",
+      navIcon: "grid",
+      title: "Frameworks",
+      searchText: "People Development frameworks Early Careers structured path shared playbook workforce planning recruiting selection welcome onboarding development experience networking community transition mobility alumni retention ECPM recruiter manager buddy mentor EC talent.",
+      html: `
+        <div class="guide-strategy frameworks-page early-careers-framework-page">
+          <h2>Framework: Structured, Shared, Social</h2>
+          <p class="strategy-lead">Use this to explain Early Careers as a working system: clear expectations by phase and role, from workforce demand through alumni engagement.</p>
+
+          <div class="early-journey-scroll" aria-label="Early Careers journey by phase and stakeholder">
+            <div class="early-journey-grid">
+              <article class="early-phase-card phase-planning">
+                <header>
+                  <span>01</span>
+                  <h3>Workforce planning</h3>
+                  <p>Align demand</p>
+                </header>
+                <div class="role-event people-dev"><b>People Dev / ECPM</b><span>Confirms hiring targets, timeline, program needs, and business demand signals using planning trackers, headcount inputs, and Domo reports.</span></div>
+                <div class="role-event recruitment"><b>Recruitment</b><span>Aligns school outreach and recruiting strategy to the approved demand and target profiles.</span></div>
+                <div class="role-event talent"><b>EC Talent</b><span>Discovers the program and starts seeing where they might fit.</span></div>
+                <div class="role-event buddy"><b>Buddy / Mentor</b><span>Not active yet, but future alumni or mentors can support events and role previews.</span></div>
+                <div class="role-event managers"><b>Managers</b><span>Commit roles, locations, skills needed, and possible project work.</span></div>
+              </article>
+
+              <article class="early-phase-card phase-recruiting">
+                <header>
+                  <span>02</span>
+                  <h3>Recruiting &amp; selection</h3>
+                  <p>Design experience</p>
+                </header>
+                <div class="role-event people-dev"><b>People Dev / ECPM</b><span>Keeps the program promise clear and sends manager readiness materials, interview guides, and role expectations.</span></div>
+                <div class="role-event recruitment"><b>Recruitment</b><span>Explains programs, screens eligibility, communicates through email, updates Taleo, and coordinates interviews.</span></div>
+                <div class="role-event talent"><b>EC Talent</b><span>Applies, completes candidate steps in Taleo, interviews, shares real examples, and shows potential.</span></div>
+                <div class="role-event buddy"><b>Buddy / Mentor</b><span>May join events to share role realities and encourage candidates.</span></div>
+                <div class="role-event managers"><b>Managers</b><span>Interview for fit and begin drafting a meaningful summer or role plan.</span></div>
+              </article>
+
+              <article class="early-phase-card phase-onboarding">
+                <header>
+                  <span>03</span>
+                  <h3>Welcome &amp; onboarding</h3>
+                  <p>Create foundation</p>
+                </header>
+                <div class="role-event people-dev"><b>People Dev / ECPM</b><span>Adds talent to the roster, confirms placement, tracks readiness, and protects handoffs between recruiting, managers, and program support.</span></div>
+                <div class="role-event recruitment"><b>Recruitment</b><span>Manages offer details, keep-warm email messages, and pre-start communication.</span></div>
+                <div class="role-event talent"><b>EC Talent</b><span>Accepts offer, completes surveys and onboarding steps, then starts with a clear plan.</span></div>
+                <div class="role-event buddy"><b>Buddy / Mentor</b><span>Guides belonging through welcome messages, first-week check-ins, and practical answers.</span></div>
+                <div class="role-event managers"><b>Managers</b><span>Set expectations, prepare role clarity, welcome note, and first-week calendar plan.</span></div>
+              </article>
+
+              <article class="early-phase-card phase-development">
+                <header>
+                  <span>04</span>
+                  <h3>Development experience</h3>
+                  <p>Enable learning</p>
+                </header>
+                <div class="role-event people-dev"><b>People Dev / ECPM</b><span>Runs bootcamp, learning paths, program events, feedback surveys, and progress checkpoints.</span></div>
+                <div class="role-event recruitment"><b>Recruitment</b><span>Stays aligned on future offer timing, requisition needs, and candidate status in recruiting systems.</span></div>
+                <div class="role-event talent"><b>EC Talent</b><span>Does real work, practices skills, reflects, receives feedback, and improves through projects and check-ins.</span></div>
+                <div class="role-event buddy"><b>Buddy / Mentor</b><span>Coaches growth, points to examples, and helps the learner ask better questions in the flow of work.</span></div>
+                <div class="role-event managers"><b>Managers</b><span>Assign stretch work, review output, coach quickly, and document evidence for calibration.</span></div>
+              </article>
+
+              <article class="early-phase-card phase-community">
+                <header>
+                  <span>05</span>
+                  <h3>Networking &amp; community</h3>
+                  <p>Shape community</p>
+                </header>
+                <div class="role-event people-dev"><b>People Dev / ECPM</b><span>Creates mentor groups, leader exposure, regional events, community invites, and connection points.</span></div>
+                <div class="role-event recruitment"><b>Recruitment</b><span>Supports engagement and keeps the program visible to future candidates through events and stories.</span></div>
+                <div class="role-event talent"><b>EC Talent</b><span>Builds network, meets peers, sees the mission, and learns how the company works beyond one team.</span></div>
+                <div class="role-event buddy"><b>Buddy / Mentor</b><span>Makes introductions and answers questions interns may not ask managers.</span></div>
+                <div class="role-event managers"><b>Managers</b><span>Facilitate relationships and connect daily work to the broader business.</span></div>
+              </article>
+
+              <article class="early-phase-card phase-transition">
+                <header>
+                  <span>06</span>
+                  <h3>Transition &amp; mobility</h3>
+                  <p>Facilitate decisions</p>
+                </header>
+                <div class="role-event people-dev"><b>People Dev / ECPM</b><span>Hosts calibration, gathers survey and performance evidence, and coordinates fair conversion decisions.</span></div>
+                <div class="role-event recruitment"><b>Recruitment</b><span>Coordinates offer timing, requisition constraints, Taleo updates, and full-time offer steps.</span></div>
+                <div class="role-event talent"><b>EC Talent</b><span>Presents work, names interests, receives feedback, and explores next pathways.</span></div>
+                <div class="role-event buddy"><b>Buddy / Mentor</b><span>Validates readiness and helps talent reflect on role fit and next steps.</span></div>
+                <div class="role-event managers"><b>Managers</b><span>Evaluate performance, recommend placement, and bring work evidence to calibration.</span></div>
+              </article>
+
+              <article class="early-phase-card phase-alumni">
+                <header>
+                  <span>07</span>
+                  <h3>Alumni &amp; retention</h3>
+                  <p>Evaluate outcomes</p>
+                </header>
+                <div class="role-event people-dev"><b>People Dev / ECPM</b><span>Measures retention, mobility, experience, conversion, and program quality using surveys, rosters, and Domo reporting.</span></div>
+                <div class="role-event recruitment"><b>Recruitment</b><span>Maintains pipeline through alumni referrals, events, email campaigns, and future candidate stories.</span></div>
+                <div class="role-event talent"><b>EC Talent</b><span>Returns as full-time talent, joins community, and later supports others.</span></div>
+                <div class="role-event buddy"><b>Buddy / Mentor</b><span>Sustains connection and may become the next mentor or event speaker.</span></div>
+                <div class="role-event managers"><b>Managers</b><span>Retain talent through growth work, coaching, and continued career conversations.</span></div>
+              </article>
+            </div>
+          </div>
+
+          <section class="early-framework-note">
+            <strong>How to use this in the interview</strong>
+            <span>When asked about Early Careers, point to the handoffs: the candidate sees a journey, but the program manager sees a system. Strong programs make both experiences work.</span>
+          </section>
+        </div>
+      `,
+    },
+    {
       id: "pdc-questions-map",
       type: "guide",
       group: "start",
