@@ -47,7 +47,7 @@
       group: "opening",
       question: "Why do you want this People Development Consultant role now?",
       competency: "Motivation, internal mobility, SG28 readiness",
-      script: "I want this role because it matches the part of my work that has grown the most over time. I still care about strong learning design, but I am increasingly interested in the larger system around performance: how people are onboarded, how managers reinforce behavior, how standards are shared, and how teams build capability over time.\n\nI also like the purpose behind Early Careers. School and work are connected, but they do not always prepare people in the same way. School helps people think, study, and contribute to knowledge. Work asks them to apply judgment, collaborate across teams, handle ambiguity, and perform inside real business constraints. I see Early Careers as a bridge between those two worlds.\n\nIn my current role, I have also taken on work that keeps me connected to the wider team. I onboard new hires and lead our monthly learning sessions. I organize engagement activities, post team announcements, and serve as a site point of contact. Those responsibilities have shown me that I enjoy the people-development side of the work, not only the deliverable side.\n\nOne example is The Learning Studio, a monthly learning space I launched for more than 100 learning professionals across different lines of business. The point is simple: people are learning useful tools and techniques all the time, but that knowledge gets scattered unless someone creates a place to share it.\n\nThat is where I think I can contribute. My background is in translating expectations into practical learning, coaching, job aids, onboarding, and feedback loops. I can help make the transition into work more structured, shared, and supported.",
+      script: "I want this role because it feels like a natural expansion of the work I already enjoy. I like helping people become more capable, and I like building learning systems that are not just training. Sometimes the right support is a course, but sometimes it is onboarding, coaching, a job aid, a manager guide, a clearer standard, or a feedback loop.\n\nThat is what attracts me to Early Careers. School gives people foundation and knowledge. Working and building a career require people to apply judgment, work with different teams, manage ambiguity, and deliver within real business constraints. I want to help early talent make that shift with more structure, confidence, and support.\n\nMy work has already been moving in that direction. At Optum, beyond my main training deliverables, I onboard new hires, organize engagement activities, post team announcements, and serve as a site point of contact. I also lead a monthly learning space for our wider learning team called The Learning Studio, where more than 100 learning professionals share practical tools and techniques.\n\nThat is why the role interests me now. It would let me stay close to learning while contributing to the broader conditions that help people become ready, supported, and able to keep growing.",
       points: [
         "Ready to work on the larger system around performance",
         "Current extras: onboarding, monthly learning sessions, engagement, announcements, site POC",
@@ -615,6 +615,7 @@
       });
 
     applyStructuredAnswerFormat();
+    humanizePeopleDevelopmentScripts();
 
     window.PEOPLE_DEVELOPMENT_QUESTIONS.forEach((question) => {
       if (question.script) {
@@ -623,10 +624,76 @@
     });
   }
 
+  function humanizePeopleDevelopmentScripts() {
+    const replacements = [
+      [
+        "I want to help early talent make that shift with more structure, confidence, and support.",
+        "I want to help early talent make that shift with more structure and confidence."
+      ],
+      [
+        "It would let me stay close to learning while contributing to the broader conditions that help people become ready, supported, and able to keep growing.",
+        "It would let me stay close to learning while contributing to the conditions that help people become ready and able to keep growing."
+      ],
+      [
+        "I can help build the structure, support, and social learning that move people toward confidence, readiness, and mobility.",
+        "I can help build the structure and social learning that move people toward confidence and readiness."
+      ],
+      [
+        "Working and building a career require people to apply judgment, work with different teams, manage ambiguity, and deliver within real business constraints.",
+        "Working and building a career require people to apply judgment with different teams and deliver within real business constraints."
+      ],
+      [
+        "That approach fits how I understand Early Careers: it is a system that needs planning, partnership, development, belonging, and measurable outcomes.",
+        "That approach fits how I understand Early Careers: it is a system that needs partnership and measurable outcomes."
+      ],
+      [
+        "I would keep building the relationships, credibility, and capability that made me interested in the role in the first place.",
+        "I would keep building the credibility and capability that made me interested in the role in the first place."
+      ],
+      [
+        "It would be to keep contributing, keep growing, and be ready when the next opportunity comes.",
+        "It would be to keep contributing and be ready when the next opportunity comes."
+      ],
+      [
+        "That helps prevent missed deadlines, surprise escalations, and hidden overload on the team.",
+        "That helps prevent missed deadlines and surprise escalations."
+      ],
+      [
+        "The goal is to help people and teams make better decisions, raise risks earlier, meet standards more consistently, and grow into stronger performers.",
+        "The goal is to help people and teams make better decisions and meet standards more consistently."
+      ],
+      [
+        "I define speed to proficiency as the time it takes someone to perform independently, consistently, and at the standard the business expects.",
+        "I define speed to proficiency as the time it takes someone to perform independently and at the standard the business expects."
+      ]
+    ];
+
+    window.PEOPLE_DEVELOPMENT_QUESTIONS.forEach((question) => {
+      if (question.script) {
+        question.script = replaceHumanizerPhrases(question.script, replacements);
+      }
+
+      if (Array.isArray(question.points)) {
+        question.points = question.points.map((point) => replaceHumanizerPhrases(point, replacements));
+      }
+
+      if (Array.isArray(question.followUps)) {
+        question.followUps = question.followUps.map((followUp) => ({
+          ...followUp,
+          points: (followUp.points || []).map((point) => replaceHumanizerPhrases(point, replacements))
+        }));
+      }
+    });
+  }
+
+  function replaceHumanizerPhrases(value, replacements) {
+    return replacements.reduce((text, [from, to]) => text.replaceAll(from, to), String(value));
+  }
+
   function applyStructuredAnswerFormat() {
     const sectionLabels = {
-      "Tell me about yourself.": ["Hook", "Optional origin story", "Example", "Framework", "Tie back"],
-      "Why do you want this People Development Consultant role now?": ["Hook", "Framework", "Example", "Tie back"],
+      "Tell me about yourself.": ["Hook", "Example", "Optional origin story", "Who I am now"],
+      "Why do you want this People Development Consultant role now?": ["Hook", "Vision", "Proof", "Tie back"],
       "This role asks for early-career hiring and talent development experience. How does your background fit?": ["Honest bridge", "Early Careers fit", "Proof", "Tie back"],
       "How do you develop early-career talent?": ["Hook", "Framework", "Example", "Tie back"],
       "Tell me about a people-development program or capability-building effort you led.": ["Problem", "Build", "Operating model", "Adoption proof"],
@@ -651,9 +718,9 @@
       "What is your leadership philosophy?": ["Hook", "Framework", "Example", "Tie back"],
     };
     const structuredScripts = {
-      "Tell me about yourself.": "Hook\nMy career has really been about helping people become capable faster. I started in teaching and facilitation, then moved into new-hire training and instructional design.\n\nOptional origin story\nA fun early example is that after college, I joined a networking company and recruited hundreds of downlines. I eventually realized I was doing too much of the work myself, so I wrote scripts, coached people one-on-one, and later rented rooms to run classes. That was one of the first times I realized I enjoyed helping other people learn how to perform.\n\nExample\nRight now, I am a senior instructional designer at Optum. I help analyze training needs and build blended learning for pharmacy technicians who process e-prescriptions. Our current goals include creating training materials for new tools and making training more efficient. Before Optum, I trained agents at Alorica, designed learning for customer-support and technical-support teams at Thomson Reuters, and built programs like Engage and Connect, a communication skills training program where we supported agents, trainers, and supervisors.\n\nFramework\nThe way I usually approach that work is simple. I understand the work people need to perform, design the right support for that work, and then look for signs that the support is actually helping people perform better. Sometimes that support is training. Sometimes it is a job aid, a coaching guide, a clearer workflow, or manager reinforcement.\n\nTie back\nThe People Development role feels like a natural expansion of that work. Instructional design helped me improve performance through learning. People Development lets me work on the broader system around performance, including role readiness, coaching, manager support, culture, and growth.",
-      "Why do you want this People Development Consultant role now?": "Hook\nI want this role because it matches the direction my work has naturally been moving. I started by helping people learn specific tasks, but the work I enjoy most now is building the system around learning so people can keep growing after the session, course, or onboarding period ends.\n\nVision\nI also like the purpose behind Early Careers. School and work are connected, but they do not always prepare people in the same way. School helps people think, study, and contribute to knowledge. Work asks them to apply judgment, collaborate across teams, handle ambiguity, and perform inside real business constraints. I see Early Careers as a bridge between those two worlds.\n\nFramework\nThere are three parts of the role that genuinely interest me. I like building learning systems, not just one-off courses. I like helping people develop skills and confidence over time. And I like turning chaos into order: taking scattered needs, unclear expectations, or inconsistent practices and shaping them into something people can actually use.\n\nExample\nIn my current role, I have taken on work beyond my assigned deliverables. I onboard new hires, organize engagement activities, post team announcements, and serve as a site point of contact. I also lead a monthly learning space for our wider learning team called The Learning Studio. It brings more than 100 learning professionals together to share practical tools and techniques instead of letting knowledge stay scattered across different lines of business.\n\nTie back\nThat is where I think I can contribute. My background is in translating expectations into practical learning, coaching, job aids, onboarding, and feedback loops. This role feels like a chance to help make the transition into work more structured, shared, and supported.",
-      "This role asks for early-career hiring and talent development experience. How does your background fit?": "Honest bridge\nI want to be clear about the hiring piece. I have not owned campus recruiting, graduate hiring, or formal conversations with students about corporate careers. That would be a learning curve for me. Where my background fits strongly is what happens after talent enters the pipeline: onboarding, readiness, coaching, and helping people build confidence and capability in a real role.\n\nEarly Careers fit\nBased on how UHG defines Early Careers, the work is broader than hiring alone. It includes the journey from workforce planning and selection through onboarding, development, networking, transition, mobility, alumni engagement, and retention. That connects closely with the work I have done for years. I have helped new and less-experienced employees understand expectations, practice the work, use support tools, receive feedback, and move toward independent performance.\n\nProof\nI taught college communication subjects for two and a half years, trained new hires at Alorica on communication and job readiness, built onboarding structure for instructional designers, and coached junior designers at Thomson Reuters and Optum. I have also built job aids, train-the-trainer support, supervisor coaching support, and learning communities like The Learning Studio.\n\nTie back\nSo my gap is formal early-career hiring. My strength is early-career development after selection, especially the structured, shared, and social parts of the experience. I can help create the path, build the playbook, support managers and mentors, and design the learning and feedback loops that help early talent become ready, connected, and mobile inside the organization.",
+      "Tell me about yourself.": "Hook\nMy career has really been about helping people become capable faster. I started in teaching and facilitation, then moved into new-hire training and instructional design.\n\nExample\nRight now, I am a senior instructional designer at Optum. I help analyze training needs and build blended learning for pharmacy technicians who process e-prescriptions. Our current goals include creating training materials for new tools and making training more efficient. Before Optum, I trained agents at Alorica, designed learning for customer-support and technical-support teams at Thomson Reuters, and replaced a generic vendor-provided training with a communication skills program that supported agents, trainers, and supervisors.\n\nOptional origin story\nI just want to share this interesting story about me: a year after graduating college, I joined a networking company and recruited hundreds of downlines. I eventually realized I was doing too much of the work myself, so I wrote scripts my downlines could use and repeat, coached people one-on-one, and later rented rooms to run classes. That was one of the first times I realized I enjoyed helping other people learn how to perform.\n\nWho I am now\nOver time, that became the kind of professional I try to be. I am someone who can understand a performance problem, turn it into practical support, and help people use that support in the real work. That may be training, but it can also be onboarding, job aids, coaching guides, manager support, standards, or a better way to share knowledge across a team.",
+      "Why do you want this People Development Consultant role now?": "Hook\nI want this role because it feels like a natural expansion of the work I already enjoy. I like helping people become more capable, and I like building learning systems that are not just training. Sometimes the right support is a course, but sometimes it is onboarding, coaching, a job aid, a manager guide, a clearer standard, or a feedback loop.\n\nVision\nThat is what attracts me to Early Careers. School gives people foundation and knowledge. Working and building a career require people to apply judgment, work with different teams, manage ambiguity, and deliver within real business constraints. I want to help early talent make that shift with more structure, confidence, and support.\n\nProof\nMy work has already been moving in that direction. At Optum, beyond my main training deliverables, I onboard new hires, organize engagement activities, post team announcements, and serve as a site point of contact. I also lead a monthly learning space for our wider learning team called The Learning Studio, where more than 100 learning professionals share practical tools and techniques.\n\nTie back\nThat is why the role interests me now. It would let me stay close to learning while contributing to the broader conditions that help people become ready, supported, and able to keep growing.",
+      "This role asks for early-career hiring and talent development experience. How does your background fit?": "Honest bridge\nI want to be clear about the hiring piece. I have not owned campus recruiting, graduate hiring, or formal conversations with students about corporate careers. That would be a learning curve for me. Where my background fits strongly is what happens after talent enters the pipeline: onboarding, readiness, coaching, and helping people build confidence and capability in a real role.\n\nEarly Careers fit\nBased on how UHG defines Early Careers, the work is broader than hiring alone. It includes the journey from workforce planning and selection through onboarding, development, networking, transition, mobility, alumni engagement, and retention. That connects closely with the work I have done for years. I have helped new and less-experienced employees understand expectations, practice the work, use support tools, receive feedback, and move toward independent performance.\n\nProof\nI taught college communication subjects for two and a half years, trained new hires at Alorica on communication and job readiness, built onboarding structure for instructional designers, and coached junior designers at Thomson Reuters and Optum. I have also built job aids, train-the-trainer support, supervisor coaching support, and learning communities like The Learning Studio.\n\nTie back\nSo my gap is formal early-career hiring. My strength is early-career development after selection. I can help create the path, build the playbook, support managers and mentors, and design the learning and feedback loops.",
       "How do you develop early-career talent?": "Hook\nI would develop early-career talent through a structured, shared, and social approach. Early-career development should not feel like a person is handed a role and then left to figure out the organization alone. They need a clear path, a shared support system, and real connection with people who can help them grow.\n\nFramework\nStructured means there is a visible journey from workforce planning and selection through onboarding, development, networking, transition, mobility, and retention. Shared means the responsibility does not sit with one team alone. People Development, recruiters, managers, buddies, mentors, and the employee all need a common playbook. Social means development has to include belonging, peer connection, leader exposure, mentoring, and community, because those relationships help early talent understand how the organization actually works.\n\nExample\nIn practice, I would turn that into a playbook with clear expectations by phase and by stakeholder. The early-career employee would know what to focus on, what good looks like, and what reflections or next steps to complete. Managers and buddies would know what conversations to have, what feedback to give, and when to check for readiness. The program team would be able to see progress, collect feedback, and spot where people are getting stuck.\n\nTie back\nThat connects well with my background because I have built onboarding, job aids, coaching support, and structured learning experiences after people enter a role. I would still need to learn the formal early-career hiring process, but once talent enters the pipeline, I can help build the structure, support, and social learning that move people toward confidence, readiness, and mobility.",
       "Describe your coaching approach.": "Hook\nMy coaching approach is to understand before I advise. I try not to jump straight into fixing the work because the visible issue is not always the real issue.\n\nFramework\nI usually start with a few questions. What are you trying to accomplish? Where are you stuck? What have you already tried? What kind of support would be useful right now? From there, I calibrate the support. Sometimes the person needs confidence, sometimes a clearer standard, sometimes a specific example, and sometimes a better way to think through the decision.\n\nExample\nA recent example is from The Learning Studio. One team member volunteered to facilitate a session on editing AI-generated HTML for Articulate Rise. Her first deck was accurate, but it started too deep in HTML, CSS, and JavaScript. Before giving advice, I asked what she wanted designers to be able to do after the session and which parts she thought they would find hardest. That helped us see that the audience needed a practical before-and-after first, not a programming lecture.\n\nTie back\nShe kept ownership of the session and revised the deck herself. In practice, I want coaching to improve the decision without taking the work away from the person. I do not want to make someone else's work sound like mine. I want to help the person make a better decision and still own the solution.",
       "How do you diagnose development needs?": "Hook\nI try to diagnose the work before I diagnose the person. If I start with the assumption that people need training, I may miss the real barrier.\n\nFramework\nI start with the business goal and the behavior that needs to change. Then I look at the gap. Is it knowledge, skill, confidence, motivation, process, tools, environment, manager reinforcement, or unclear expectations? I also adjust the method to the size of the problem. A larger capability-building program may need a more ADDIE-style approach. A smaller targeted performance issue may need something more iterative, closer to SAM.\n\nExample\nEngage and Connect is my large-scope example. We examined communication and performance metrics, identified the behaviors that mattered, and designed the program around those behaviors instead of just building a generic communication course. ACS at Thomson Reuters is the more targeted example. Leaders asked us to make the ACS training more fun and engaging. ACS was an accounting tool, and the request was too vague to design from directly. After asking more questions, I learned that agents could empathize and converse, but they struggled to resolve issues because they were not asking enough probing questions. I checked the training report, and the data confirmed that probing was where the cohort struggled. So instead of just adding games, I built a scenario-based ILT activity in PowerPoint. Learners chose statements in customer conversations, saw different paths and consequences, and discussed why each choice worked or did not work. It was simple technology, but the design was targeted to the learning objective. The next cohort improved in probing.\n\nTie back\nI would bring that same diagnostic discipline to People Development. I would separate the request from the real need, choose the level of analysis that fits the problem, and recommend training, coaching, job aids, manager support, or process escalation depending on what is actually getting in the way.",
@@ -663,8 +730,8 @@
       "What is your leadership philosophy?": "Hook\nMy leadership philosophy, even as an individual contributor, is context, not control.\n\nFramework\nPeople make better decisions when they understand the business problem, the desired outcome, the constraints, the quality standard, and what we still do not know. My role is to create that context, remove barriers where I can, give candid feedback, and step in when the risk requires it.\n\nExample\nThat shows up in how I coach and lead work. On complex projects, I try to make standards visible through examples, templates, trackers, and review points. When someone has deeper expertise than I do, I want to use that openly instead of pretending I know everything. When someone needs more structure, I provide scaffolding and remove it as they build judgment.\n\nTie back\nThat matters for People Development because the goal is not dependency. The goal is to help people and teams make better decisions, raise risks earlier, meet standards more consistently, and grow into stronger performers.",
     };
     const pointSummaries = {
-      "Tell me about yourself.": ["Pattern: help people get capable faster | Teaching and facilitation | Training and ID credibility", "Optional story | Downlines, scripts, classes | Learned I liked helping others perform", "Optum pharmacy work first | Alorica and TR support teams | Engage and Connect: comms skills", "Method: understand work | Build right support | Check performance", "People Dev expands the work | Readiness, coaching, managers | Culture and growth"],
-      "Why do you want this People Development Consultant role now?": ["Work direction is shifting | From specific tasks | To systems that sustain growth", "Vision: bridge school and work | School builds thinking | Work requires applied judgment", "Build learning systems | Develop skills and confidence | Turn chaos into order", "Current extras: onboarding | Engagement and announcements | Site point of contact", "Learning Studio context | Monthly space for 100+ learning pros | Shares tools across LOBs", "My contribution | Practical learning, coaching, job aids | Structured and supported transition"],
+      "Tell me about yourself.": ["Pattern: help people get capable faster | Teaching and facilitation | Training and ID credibility", "Optum pharmacy work first | Alorica and TR support teams | Engage and Connect: comms skills", "Optional story | Downlines, scripts, classes | Learned I liked helping others perform", "Who I am now | Diagnose performance problems | Build practical support"],
+      "Why do you want this People Development Consultant role now?": ["Natural expansion | Help people become capable | Build systems beyond training", "Support options | Course, onboarding, coaching | Job aid, manager guide, feedback loop", "Early Careers vision | School builds thinking | Work requires applied judgment", "Transition support | Structure and confidence | Early talent feels supported", "Optum proof | Onboarding, engagement, announcements | Site point of contact", "Learning Studio | 100+ learning pros | Share tools across LOBs"],
       "This role asks for early-career hiring and talent development experience. How does your background fit?": ["Own the gap: campus hiring | Learning curve is recruiting | Strength is post-selection development", "Early Careers is a journey | Hiring to mobility and retention | My work fits readiness", "College teaching | Alorica new-hire readiness | ID onboarding and coaching", "My lane: after selection | Build path and playbook | Support managers and mentors"],
       "How do you develop early-career talent?": ["Lead with structured, shared, social | Clear path | Shared support | Real connection", "Structured: visible journey | Shared: common playbook | Social: belonging and mentors", "Build phase playbook | Define good work | Check readiness signals", "Bridge from my background | Onboarding, job aids, coaching | Confidence and mobility"],
       "Tell me about a people-development program or capability-building effort you led.": ["Problem: scattered expertise | 100+ learning pros | Needed shared space", "Started practical sharing | Formalized monthly sessions | Built SharePoint hub", "Session formula: show, why, how, apply | 70% monthly participation | Useful enough to return", "AI Rise as proof | Prompt, guide, launch | Follow-up poll showed adoption"],
@@ -722,6 +789,97 @@
         .replace(/,\s+/g, ", | ")
         .replace(/;\s+/g, "; | ")
         .replace(/:\s+/g, ": | "))
+      .map(addPhraseCues)
       .join("\n\n");
+  }
+
+  function addPhraseCues(paragraph) {
+    return [
+      "instead of",
+      "so that",
+      "in order to",
+      "even when",
+      "were already",
+      "had actually",
+      "showed roughly",
+      "I enjoyed",
+      "and",
+      "but",
+      "because",
+      "so",
+      "that",
+      "who",
+      "where",
+      "when",
+      "while",
+      "whether",
+      "which",
+      "how",
+      "for",
+      "on",
+      "with",
+      "without",
+      "inside",
+      "before",
+      "after"
+    ].reduce((text, connector) => addCueBeforeConnector(text, connector), paragraph);
+  }
+
+  function addCueBeforeConnector(text, connector) {
+    const escapedConnector = connector.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+    const pattern = new RegExp(`\\s+(${escapedConnector})\\s+`, "gi");
+    return text.replace(pattern, (match, word, offset, fullText) => {
+      const previous = fullText.slice(0, offset);
+      const next = fullText.slice(offset + match.length);
+      const previousBreak = Math.max(previous.lastIndexOf("||"), previous.lastIndexOf("|"), previous.lastIndexOf("\n"));
+      const phraseLength = previous.length - previousBreak;
+      const nextBreak = next.search(/(\|\||\||[.!?])/);
+      const nextLength = nextBreak === -1 ? next.length : nextBreak;
+      const connectorKey = word.toLowerCase();
+      const previousPhrase = previous.slice(previousBreak + 1).trim();
+      const phraseThreshold = connectorCueThreshold(connectorKey);
+      const nextThreshold = ["inside", "with", "without"].includes(connectorKey) ? 10 : 18;
+
+      if (connectorKey === "that" && /\b(make|made|makes|help|helps|helped|use|uses|used|bring|brings|brought|about)\s*$/i.test(previousPhrase)) {
+        return match;
+      }
+
+      if (connectorKey === "where" && /\b(is|are|was|were)\s*$/i.test(previousPhrase)) {
+        return match;
+      }
+
+      if (phraseLength >= phraseThreshold && nextLength >= nextThreshold) {
+        return ` | ${word} `;
+      }
+
+      return match;
+    });
+  }
+
+  function connectorCueThreshold(connector) {
+    const thresholds = {
+      and: 28,
+      so: 24,
+      that: 12,
+      how: 18,
+      for: 38,
+      on: 46,
+      inside: 28,
+      with: 30,
+      without: 30,
+      before: 30,
+      after: 30,
+      because: 30,
+      "instead of": 28,
+      "so that": 28,
+      "in order to": 28,
+      "even when": 28,
+      "were already": 28,
+      "had actually": 28,
+      "showed roughly": 28,
+      "I enjoyed": 28
+    };
+
+    return thresholds[connector] || 34;
   }
 })();

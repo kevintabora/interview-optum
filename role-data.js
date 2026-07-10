@@ -241,6 +241,160 @@
       `,
     },
     {
+      id: "pdc-projects",
+      type: "guide",
+      group: "start",
+      navIcon: "briefcase",
+      title: "Projects",
+      searchText: "Projects by company Alorica Thomson Reuters Optum. Davao CSAT, communication training, Rise onboarding module, Engage and Connect, 3E onboarding, ACS, accessibility, Learning Studio, AI Rise code, pharmacy technician training, job aids, SharePoint, Training Designer app.",
+      html: `
+        <div class="guide-strategy projects-page">
+          <h2>Projects</h2>
+          <p class="strategy-lead">Use this if they ask why several stories come from Thomson Reuters. The short answer: Thomson Reuters gave you several large, named case studies, but Optum has current and relevant people-development work too.</p>
+
+          <section class="project-response-card">
+            <p class="column-label orange">If they ask why many examples are from Thomson Reuters</p>
+            <blockquote>"A lot of my Thomson Reuters examples are easy to tell because they were large, named projects with clear before-and-after outcomes. At Optum, my work is current and spread across training design, performance support, team onboarding, capability sharing, and adoption of new tools. So I can absolutely speak to Optum work; I just choose the example based on the question."</blockquote>
+          </section>
+
+          <div class="project-company-grid">
+            <section class="project-company-card optum-projects">
+              <div class="project-company-heading">
+                <span>Current</span>
+                <h3>Optum</h3>
+              </div>
+              <article>
+                <h4>Pharmacy technician blended learning</h4>
+                <div class="project-tags">
+                  <a href="#pdc-q01-tell-me-about-yourself" data-question-link="pdc-q01-tell-me-about-yourself">current role</a>
+                  <a href="#pdc-reuse-22-how-do-you-prioritize-competing-tasks" data-question-link="pdc-reuse-22-how-do-you-prioritize-competing-tasks">priority</a>
+                </div>
+                <p>Analyze training needs and build training for pharmacy technicians who process e-prescriptions, including new-tool readiness and efficiency improvements.</p>
+              </article>
+              <article>
+                <h4>Performance support and job aids</h4>
+                <p>Recommended leaner support when tenured pharmacy technicians needed help with a familiar-but-different tool instead of a full course.</p>
+              </article>
+              <article>
+                <h4>The Learning Studio</h4>
+                <div class="project-tags">
+                  <a href="#pdc-q04-learning-studio" data-question-link="pdc-q04-learning-studio">capability</a>
+                  <a href="#pdc-q05-coaching-approach" data-question-link="pdc-q05-coaching-approach">coaching</a>
+                </div>
+                <p>Launched monthly learning sessions for 100+ learning professionals so practical tools and techniques do not stay scattered across lines of business.</p>
+              </article>
+              <article>
+                <h4>AI-generated Rise code adoption</h4>
+                <div class="project-tags">
+                  <a href="#pdc-reuse-15-q-optum-ai-generated-rise-code-innovation" data-question-link="pdc-reuse-15-q-optum-ai-generated-rise-code-innovation">innovation</a>
+                  <a href="#pdc-q04-learning-studio" data-question-link="pdc-q04-learning-studio">adoption</a>
+                </div>
+                <p>Created a reusable prompt, guide, examples, walkthrough, and launch communication to help designers use AI-generated HTML activities inside Rise.</p>
+              </article>
+              <article>
+                <h4>ID onboarding and team resources</h4>
+                <div class="project-tags">
+                  <a href="#pdc-q03-early-career-gap" data-question-link="pdc-q03-early-career-gap">onboarding</a>
+                  <a href="#pdc-q02-why-this-role-now" data-question-link="pdc-q02-why-this-role-now">team work</a>
+                </div>
+                <p>Onboard new hires to the instructional design team and created a SharePoint space to centralize resources after learning sessions.</p>
+              </article>
+            </section>
+
+            <section class="project-company-card">
+              <div class="project-company-heading">
+                <span>Major case studies</span>
+                <h3>Thomson Reuters</h3>
+              </div>
+              <article>
+                <h4>Engage and Connect</h4>
+                <div class="project-tags">
+                  <a href="#pdc-reuse-14-what-is-your-greatest-professional-achievement" data-question-link="pdc-reuse-14-what-is-your-greatest-professional-achievement">achievement</a>
+                  <a href="#pdc-q12-diagnose-development-needs" data-question-link="pdc-q12-diagnose-development-needs">diagnosis</a>
+                </div>
+                <p>Built an in-house communication skills program with training, train-the-trainer support, job aids, and supervisor coaching support.</p>
+              </article>
+              <article>
+                <h4>3E onboarding</h4>
+                <div class="project-tags">
+                  <a href="#pdc-reuse-16-describe-a-complex-project-involving-many-stakeh" data-question-link="pdc-reuse-16-describe-a-complex-project-involving-many-stakeh">stakeholders</a>
+                  <a href="#pdc-reuse-24-how-do-you-define-and-measure-speed-to-proficien" data-question-link="pdc-reuse-24-how-do-you-define-and-measure-speed-to-proficien">proficiency</a>
+                </div>
+                <p>Led a complex onboarding solution with scenario-based workbooks, SME coordination, templates, trackers, and measurable speed-to-proficiency impact.</p>
+              </article>
+              <article>
+                <h4>ACS probing scenario activity</h4>
+                <div class="project-tags">
+                  <a href="#pdc-q12-diagnose-development-needs" data-question-link="pdc-q12-diagnose-development-needs">diagnosis</a>
+                </div>
+                <p>Turned a vague request for “more engaging training” into a targeted scenario-based ILT activity after data showed probing was the real gap.</p>
+              </article>
+              <article>
+                <h4>Training Designer app</h4>
+                <div class="project-tags">
+                  <a href="#pdc-q13-data-technology" data-question-link="pdc-q13-data-technology">data</a>
+                </div>
+                <p>Built a tool that helps quantify the structure of training by objective, activity, cognitive task, content type, media, method, and duration.</p>
+              </article>
+              <article>
+                <h4>Articulate Rise workshop</h4>
+                <div class="project-tags">
+                  <a href="#pdc-q07-facilitation" data-question-link="pdc-q07-facilitation">facilitation</a>
+                </div>
+                <p>Facilitated a three-day Rise workshop that helped trainers move from a blank document to deployable self-paced courses uploaded to the LMS.</p>
+              </article>
+              <article>
+                <h4>Designer coaching and QA standards</h4>
+                <div class="project-tags">
+                  <a href="#pdc-q06-coaching-designer" data-question-link="pdc-q06-coaching-designer">coaching</a>
+                </div>
+                <p>Coached junior instructional designers and built QA criteria around instructional content, visual design, and accessibility.</p>
+              </article>
+              <article>
+                <h4>Accessibility reset</h4>
+                <div class="project-tags">
+                  <a href="#pdc-q09-accessibility" data-question-link="pdc-q09-accessibility">accessibility</a>
+                </div>
+                <p>Turned a difficult accessibility complaint into a stronger operating standard: design must match the objective, learner proficiency, and accessibility guidelines.</p>
+              </article>
+            </section>
+
+            <section class="project-company-card">
+              <div class="project-company-heading">
+                <span>Foundation</span>
+                <h3>Alorica</h3>
+              </div>
+              <article>
+                <h4>New-hire communication training</h4>
+                <div class="project-tags">
+                  <a href="#pdc-q03-early-career-gap" data-question-link="pdc-q03-early-career-gap">readiness</a>
+                </div>
+                <p>Trained agents on grammar, accent, phone handling, communication skills, and job readiness using tell-show-do and practice-heavy facilitation.</p>
+              </article>
+              <article>
+                <h4>ID onboarding Rise module</h4>
+                <div class="project-tags">
+                  <a href="#pdc-q03-early-career-gap" data-question-link="pdc-q03-early-career-gap">onboarding</a>
+                </div>
+                <p>Created a Rise-based onboarding module that made the instructional design workflow more structured, visual, and consistent for new designers.</p>
+              </article>
+              <article>
+                <h4>Davao CSAT investigation</h4>
+                <div class="project-tags">
+                  <a href="#pdc-q08-performance-consulting" data-question-link="pdc-q08-performance-consulting">performance</a>
+                </div>
+                <p>Interviewed agents and supervisors, found a process issue behind low CSAT, built an empathetic script, and escalated the customer-effort issue to the client.</p>
+              </article>
+              <article>
+                <h4>Tool workshops</h4>
+                <p>Facilitated workshops on tools such as Articulate products, Camtasia, Vyond, Captivate, and Audacity to build practical production capability.</p>
+              </article>
+            </section>
+          </div>
+        </div>
+      `,
+    },
+    {
       id: "pdc-questions-map",
       type: "guide",
       group: "start",

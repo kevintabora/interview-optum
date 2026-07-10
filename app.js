@@ -218,7 +218,8 @@
   function renderGuidePage(page, group) {
     const isFrameworkPage = page.id.includes("framework");
     const isQuestionMapPage = page.id.includes("questions-map");
-    elements.answerPanel.classList.toggle("wide-guide-panel", isFrameworkPage || isQuestionMapPage);
+    const isProjectsPage = page.id.includes("projects");
+    elements.answerPanel.classList.toggle("wide-guide-panel", isFrameworkPage || isQuestionMapPage || isProjectsPage);
     elements.answerPanel.classList.toggle("framework-guide-panel", isFrameworkPage);
     elements.answerPanel.classList.toggle("question-map-guide-panel", isQuestionMapPage);
     elements.answerHeading.hidden = true;
@@ -537,6 +538,9 @@
     }
     if (name === "compass") {
       return '<svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="m15.5 8.5-2 5-5 2 2-5 5-2Z"/></svg>';
+    }
+    if (name === "briefcase") {
+      return '<svg aria-hidden="true" viewBox="0 0 24 24"><path d="M9 6V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v1"/><path d="M4 7h16v12H4z"/><path d="M4 12h16"/><path d="M10 12v2h4v-2"/></svg>';
     }
     return '<svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H11v16H6.5A2.5 2.5 0 0 0 4 21.5v-16ZM20 5.5A2.5 2.5 0 0 0 17.5 3H13v16h4.5a2.5 2.5 0 0 1 2.5 2.5v-16Z"/></svg>';
   }
