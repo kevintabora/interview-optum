@@ -443,9 +443,45 @@
       keywords: ["diagnose", "development needs", "needs analysis", "performance gap", "training"]
     },
     {
-      id: "pdc-q13-data-technology",
+      id: "pdc-q13-early-career-success-measures",
       type: "question",
       number: 13,
+      group: "early-talent",
+      question: "What measures of success would you use for an Early Careers program?",
+      competency: "Program measurement, Early Careers strategy, business outcomes",
+      script: "I would measure success across the Early Careers life cycle, but I would start by confirming the business problem first. I would not assume one talent profile too early. I would validate the target roles, volume needed, success profile, and readiness gaps with the business and recruitment.\n\nFrom there, I would look at four areas. The first is pipeline: are we attracting and converting enough qualified early-career talent for the roles the business needs? That could include qualified applicants, school partnerships, campaign reach, offer acceptance, conversion from internship or program participation, and placement into priority roles.\n\nThe second is speed to productivity. Once they join, how quickly are they becoming useful in the role? I would look at onboarding completion, assessment results, manager feedback, time to proficiency, early quality or productivity indicators, and how much support they still need after onboarding.\n\nThe third is retention. Are they staying long enough for the investment to make sense? I would look at retention at key checkpoints like 6 months, 12 months, and 24 months, plus engagement, manager check-ins, and reasons for early attrition.\n\nThe fourth is employer brand. If the program will become sustainable, schools and candidates need to see Optum as a place where early talent can start and grow. I would look at school engagement, event participation, candidate experience feedback, referrals, and whether participants are willing to speak positively about the experience.\n\nIf I had to simplify it, the program is successful if we bring in the right early talent, help them become productive faster, retain strong performers, and build a reputation that makes the next cohort easier to attract.",
+      points: [
+        "Start with business problem: roles, volume, success profile, readiness gaps",
+        "Pipeline: qualified applicants, school partnerships, conversion, placement",
+        "Productivity: onboarding, assessment, manager feedback, time to proficiency",
+        "Retention: 6, 12, 24-month checkpoints and early attrition reasons",
+        "Employer brand: school engagement, candidate feedback, referrals",
+        "Simple test: right talent, productive faster, retained, easier next cohort"
+      ],
+      note: "Use this if they ask for measures. Do not jump straight to a list. Start with the business problem, then move through the life cycle.",
+      followUps: [
+        {
+          question: "What if they ask for leading and lagging measures?",
+          points: [
+            "Leading: qualified applicants, offer acceptance, onboarding completion, assessment results, manager confidence, early checkpoints.",
+            "Lagging: conversion, time to proficiency, retention, internal movement, business feedback on whether they would hire from the program again."
+          ]
+        },
+        {
+          question: "How would you handle pipeline measures without direct campus hiring experience?",
+          points: [
+            "Partner closely with recruitment.",
+            "Contribute the role-readiness message: what the work is, what good looks like, and how the program helps people move from school readiness to role readiness.",
+            "Use campus relationships, targeted campaigns, job fairs, short exposure programs, referrals, and talent communities where appropriate."
+          ]
+        }
+      ],
+      keywords: ["early careers", "success measures", "pipeline", "retention", "productivity", "employer brand"]
+    },
+    {
+      id: "pdc-q14-data-technology",
+      type: "question",
+      number: 14,
       group: "performance",
       question: "How do you use data and technology in people development?",
       competency: "Data-informed decisions, technology enablement, innovation",
@@ -470,6 +506,121 @@
         }
       ],
       keywords: ["data", "technology", "AI", "The Learning Studio", "adoption", "measurement"]
+    },
+    {
+      id: "pdc-q15-vague-request",
+      type: "question",
+      number: 15,
+      group: "readiness",
+      question: "Was there ever a time a request was vague but you navigated it successfully?",
+      competency: "Ambiguity, self-starting, rapid prototyping",
+      script: "One example was at the start of the pandemic. A client supporting a US government agency needed a fully self-paced onboarding for agents handling unemployment-benefits inquiries. The request was urgent because call volume was high, but the input was very limited. We had one kickoff meeting, technical documents, and almost no SME access because everyone was busy with the work-from-home transition.\n\nAt first, I tried to create an outline, but it was clear that the outline was not enough. My director was frustrated with the progress, and honestly, I was frustrated too. So I changed my approach. Instead of continuing to explain the plan, I built a prototype that people could react to.\n\nThe main decision I made was to stop organizing the course around the technical documents. I organized it around the call flow. For each part of the call, learners would see the concept, the script, a demo, and then practice. The first day covered the first parts of the call flow, and the second day covered the rest plus practice. That gave the onboarding structure even without heavy SME involvement.\n\nWe launched it the following week. We also added an assessment, and most agents passed. After launch, the client had only minor content feedback, which told us the structure was working well enough for the need. Operationally, the account did not show major escalation issues, and first-call resolution was performing well for those straightforward inquiry calls.\n\nWhat I learned is that when a request is vague, I should move quickly from discussion to something people can react to. I still need to research and understand the work, but if the stakeholder does not have the full vision yet, I can build a rough version of that vision, test it quickly, and improve it from there.",
+      points: [
+        "Pandemic rush: US government unemployment-benefits inquiry account",
+        "Inputs were thin: one kickoff, technical docs, almost no SME access",
+        "Shifted from outline to prototype when plan was not landing",
+        "Organized content around call flow, not technical documents",
+        "Pattern: concept, script, demo, practice",
+        "Launched next week; assessment passed by most agents",
+        "After launch: minor content feedback, no major escalation issues, strong FCR",
+        "Lesson: create structure fast through a rough prototype"
+      ],
+      note: "This is your best ambiguity story. It shows pressure, incomplete information, a prototype, launch, and a measurable enough result.",
+      followUps: [
+        {
+          question: "What did you learn about ambiguity?",
+          points: [
+            "Move quickly from discussion to something people can react to.",
+            "Research enough to understand the work.",
+            "If the stakeholder does not have the vision yet, build a rough version and improve from feedback."
+          ]
+        },
+        {
+          question: "How did you measure success?",
+          points: [
+            "Launch success: delivered the following week.",
+            "Content usability: only minor client feedback after launch.",
+            "Learning success: assessment included, most agents passed.",
+            "Operational fit: no major escalation issues and first-call resolution performed well for straightforward inquiry calls."
+          ]
+        }
+      ],
+      keywords: ["ambiguity", "vague request", "pandemic", "prototype", "self-paced onboarding", "government", "FCR"]
+    },
+    {
+      id: "pdc-q16-lateral-move",
+      type: "question",
+      number: 16,
+      group: "readiness",
+      question: "If this role were SG27 as a lateral move with no increase, would you still take it?",
+      competency: "Motivation, compensation judgment, scope clarity",
+      script: "I do not want to answer that carelessly. I am genuinely interested in the work, but I also want to be fair to both sides. If the role were offered as SG27 with no increase, I would want to understand the scope more clearly before giving a final answer.\n\nThe work genuinely interests me. I am excited by the chance to build something new, especially in Early Careers and People Development. At the same time, based on how the role was described, it sounds like a significant expansion in ownership: pioneer work in the Philippines, stakeholder management, ambiguity, program ownership, and building something that does not fully exist yet.\n\nSo I would want to understand whether the scope would also be adjusted to SG27, or whether there would be a clear development path toward SG28 once impact is demonstrated. My honest answer is that I would not reject the conversation because I am interested in the work. But I would need clarity on expectations, support, and growth path before I could say yes.",
+      points: [
+        "Do not give careless yes or defensive no",
+        "State real interest in the work",
+        "Name the implied issue: SG27 lateral with no increase",
+        "Scope sounds bigger: pioneer work, ambiguity, stakeholders, ownership",
+        "Ask whether scope changes or path to SG28 is clear",
+        "Answer: open to discussion, need clarity before yes"
+      ],
+      note: "This keeps you honest without sounding transactional. It protects your interest in the work and your boundary around scope.",
+      followUps: [
+        {
+          question: "What if they force a yes or no?",
+          points: [
+            "If it is the same SG28-level scope with no increase and no clear path, probably no.",
+            "If there is adjusted scope, defined support, or a clear development path, open to discussing it."
+          ]
+        },
+        {
+          question: "How do you make it sound less about pay?",
+          points: [
+            "Say it is about matching accountability with scope and expectations.",
+            "Reaffirm that the work itself genuinely interests you.",
+            "Ask how success, support, and growth would be defined."
+          ]
+        }
+      ],
+      keywords: ["SG27", "SG28", "lateral", "no increase", "promotion", "scope", "growth path"]
+    },
+    {
+      id: "pdc-q17-stressful-experience",
+      type: "question",
+      number: 17,
+      group: "growth",
+      question: "What was the most stressful experience of your career?",
+      competency: "Resilience, preparation, courage, visible leadership",
+      script: "One of the most stressful experiences I had was hosting our year-end party at Thomson Reuters in December 2023. It may sound lighter than a project crisis, but for me it was genuinely stressful because I had not hosted a major event in years, and this was for around 1,000 attendees. My VP asked if I wanted to do it because it could help our team gain visibility, and she was also going through a difficult season. I was scared, but I said yes because I wanted to help her and I knew it would stretch me in the right direction.\n\nWhat made it stressful was that it was not just public speaking. It was entertainment, planning, coordination, timing, energy, and judgment. I had experience as a trainer and college instructor, but hosting a large corporate event required a different kind of presence. I had to write my own spiels, prepare transitions, think through appropriate jokes, rehearse with colleagues, rehearse alone at home, and even plan around the vintage disco theme.\n\nA few days before the event, I was expecting the worst. What helped me was asking advice from a friend who hosts professionally. She gave me a simple but useful reset: prepare a few appropriate jokes, but remember that the event is not about me. The attendees are the focus. The goal is to help them enjoy the night.\n\nThat changed how I approached it. I stopped treating it as a performance where I had to prove myself, and started treating it as a service to the audience. On the day itself, the rehearsals paid off. There were no major issues, people enjoyed the event, and participant ratings were above 9. We had hired professional hosts the previous year, and the feedback that year was not as strong. This time, the response was better. The main improvement point was building stronger chemistry with my co-host, but overall the feedback was positive.\n\nWhat I learned from that experience is that stress becomes more manageable when I prepare seriously, ask help from people who know the work, and shift the focus away from myself and back to the people I am serving.",
+      points: [
+        "TR year-end party, December 2023, around 1,000 attendees",
+        "Accepted to help VP and build team visibility",
+        "Stress was bigger than speaking: entertainment, coordination, timing, energy",
+        "Prepared scripts, transitions, jokes, rehearsals, theme details",
+        "Asked professional host friend for advice",
+        "Mindset shift: audience is the focus, not me",
+        "Result: no major issues, ratings above 9, better than prior year hosts",
+        "Lesson: prepare seriously, ask help, serve the audience"
+      ],
+      note: "This works because it is honest and human. It shows visible stretch without pretending every stressful moment has to be a crisis.",
+      followUps: [
+        {
+          question: "Why use an event story instead of a project crisis?",
+          points: [
+            "It was a real stretch assignment with high visibility.",
+            "It tested public presence, planning, coordination, and emotional regulation.",
+            "It shows you can step into discomfort when the purpose is clear."
+          ]
+        },
+        {
+          question: "What would you improve?",
+          points: [
+            "Build stronger chemistry with the co-host earlier.",
+            "Rehearse transitions together more deliberately.",
+            "Keep the audience-first mindset."
+          ]
+        }
+      ],
+      keywords: ["stress", "year-end party", "Thomson Reuters", "hosting", "visibility", "resilience"]
     }
   ];
 
@@ -703,6 +854,7 @@
       "Tell me about a time you coached someone and helped them grow.": ["Context", "Coaching model", "Guidance", "Growth proof"],
       "Tell me about a session where you had to facilitate, not just present.": ["Context", "Hook", "Workshop model", "Result"],
       "Tell me about a time you discovered training was not the real solution.": ["Core idea", "Diagnosis", "Response", "Lesson"],
+      "What measures of success would you use for an Early Careers program?": ["Start with the business need", "Pipeline", "Speed to productivity", "Retention", "Employer brand", "Simple test"],
       "How do you diagnose development needs?": ["Hook", "Framework", "Example", "Tie back"],
       "How do you use data and technology in people development?": ["Hook", "Framework", "Example", "Tie back"],
       "How do you define and measure speed to proficiency?": ["Hook", "Framework", "Example", "Tie back"],
@@ -712,9 +864,12 @@
       "Tell me about a time you made development more accessible or equitable.": ["Context", "Accountability", "New standard", "Lesson"],
       "Tell me about a time you received unexpected or difficult feedback.": ["Context", "Reset", "Outcome", "Lesson"],
       "Tell me about a time you failed.": ["Context", "Miss", "Adoption gap", "Lesson"],
+      "What was the most stressful experience of your career?": ["Context", "Pressure", "Reset", "Result", "Lesson"],
       "What is your biggest weakness?": ["Core issue", "Risk", "Current practice", "Growth edge"],
       "What would your first 90 days look like in this role?": ["First 30 days", "Next 30 days", "Final 30 days", "Tie back"],
       "What would you do if you do not get this role?": ["Honest reaction", "Response", "Growth plan"],
+      "Was there ever a time a request was vague but you navigated it successfully?": ["Context", "Shift", "Structure", "Result", "Lesson"],
+      "If this role were SG27 as a lateral move with no increase, would you still take it?": ["Careful answer", "Interest and scope", "Boundary"],
       "What is your leadership philosophy?": ["Hook", "Framework", "Example", "Tie back"],
     };
     const structuredScripts = {
@@ -741,6 +896,7 @@
       "Tell me about a time you coached someone and helped them grow.": ["3E onboarding project | Newer ID | Complex technical practice cases", "Did not just mark up slides | Asked learner-purpose questions | Connected to job aids", "Content: better questions and feedback | Design: precision and intent | Practiced variables and triggers", "3E Cloud showed growth | Less guidance needed | More ownership"],
       "Tell me about a session where you had to facilitate, not just present.": ["Experienced trainers | Avoid beginner treatment | Goal: real Rise courses", "Blank document hook | Finished course demo | From blank to deployable", "Practice-heavy workshop | Objectives, content types, Rise blocks | Build, present, critique", "Helpful and engaging feedback | Courses uploaded to LMS | Built trainer design skill"],
       "Tell me about a time you discovered training was not the real solution.": ["Davao low CSAT | Easy assumption: comms training | Investigated first", "Interviewed agents and supervisors | Found replacement-process friction | Return, refund, repurchase", "Could not fix workflow | Built empathetic script | Raised process issue", "CSAT improved | Patience and professionalism noted | Training was mitigation"],
+      "What measures of success would you use for an Early Careers program?": ["Confirm the problem first | Target roles and volume | Success profile and readiness gaps", "Pipeline health | Qualified applicants | Conversion and placement", "Productivity speed | Assessment and manager feedback | Time to proficiency", "Retention checkpoints | 6, 12, 24 months | Early attrition reasons", "Employer brand | School engagement | Candidate feedback and referrals", "Simple test | Right talent in | Productive faster and retained"],
       "How do you diagnose development needs?": ["Diagnose work first | Avoid training default | Find real barrier", "Goal, behavior, gap | ADDIE for large scope | SAM for targeted issues", "Engage and Connect: metrics to design | ACS: vague ask to probing gap | Scenario ILT improved probing", "Separate request from need | Choose analysis depth | Match solution to barrier"],
       "How do you use data and technology in people development?": ["Use two data lenses | Performance data | Training structure data", "Check design balance | Passive vs practice | Task level vs job need", "Training Designer app | Objectives, activities, duration | Cognitive, method, media, content", "Cross-reference both sides | Performance need and design mix | Adjust structure to build capability"],
       "How do you define and measure speed to proficiency?": ["Independent performance | Consistent standard | Not just training completion", "Define with business | Quality, productivity, QA, FCR | Find stall points", "3E: 6-12 months to 10-12 weeks | Tickets after 3 months | Engage and Connect measures", "Shorten time to performance | Protect quality and compliance | Protect customer experience"],
@@ -750,9 +906,12 @@
       "Tell me about a time you made development more accessible or equitable.": ["Learner could not use mouse | Drag-and-drop failed | Keyboard backup missing", "Owned the miss | Visual focus over access | Changed quality standard", "Worked with accessibility team | Used guidelines | Made access part of QA", "Good design must be usable | Match objective and proficiency | Design for access"],
       "Tell me about a time you received unexpected or difficult feedback.": ["Job-aid prototype | Conflicting feedback | Did not defend first draft", "Reset to basics | Audience, purpose, problem | Use case clarity", "Second prototype clarified need | Manager later apologized | Stayed adaptable", "Ideation can be messy | Avoid attachment | Use artifacts to align"],
       "Tell me about a time you failed.": ["Interactive FAQ worked | But was not adopted | Build success is not value", "Weak sponsorship | Low SME commitment | Warning signs ignored", "Desktop app mismatch | No LMS or web fit | No usage data", "Now: confirm problem | Secure sponsor | Test workflow and adoption"],
+      "What was the most stressful experience of your career?": ["TR year-end party | Dec 2023 | Around 1,000 attendees", "High visibility stretch | Helped VP and team | Hosting plus coordination", "Asked host friend | Audience is the focus | Stopped making it about proving myself", "No major issues | Ratings above 9 | Better than prior year hosts", "Prepare seriously | Ask help | Serve the audience"],
       "What is your biggest weakness?": ["Can take over weak work | Quality and deadline instinct | Polished too early", "Risk: limits development | Creates dependency | Makes me bottleneck", "Now build structure | Templates, examples, tracker | Checkpoints and rebalance", "Keep standards high | Make standards visible | Coach before stepping in"],
       "What would your first 90 days look like in this role?": ["Research the business | Map Early Careers model | Learn portfolio, calendar, handoffs", "Build relationships | Listen for readiness and belonging gaps | Understand manager support", "Find a sponsor | Plan one small test | Define success measures", "Learn system first | Earn trust | Create useful early value"],
       "What would you do if you do not get this role?": ["Be honest: disappointed | Role genuinely interests me | Stay professional", "Ask for feedback | Thank the team | Stay committed to Optum", "Use decision as data | Build development plan | Prepare for next opportunity"],
+      "Was there ever a time a request was vague but you navigated it successfully?": ["Pandemic onboarding | US government inquiries | Urgent, thin inputs", "Outline was not enough | Director frustrated | Built prototype instead", "Used call flow | Concept, script, demo, practice | Less SME dependency", "Launched next week | Most agents passed assessment | Minor feedback, strong FCR", "Move fast from talk to artifact | Build rough vision | Test and improve"],
+      "If this role were SG27 as a lateral move with no increase, would you still take it?": ["Do not answer carelessly | Interested in work | Fair to both sides", "Pioneer role scope | Ambiguity and stakeholders | Program ownership", "Open to discussion | Need scope, support, growth path | Forced yes/no: probably no without clear path"],
       "What is your leadership philosophy?": ["Context, not control | Applies as IC | Easy principle", "Clarify problem and outcome | Constraints and standards | Unknowns and risks", "Use templates and review points | Use others' expertise | Scaffold, then remove", "Goal is not dependency | Better decisions | Earlier risks, stronger performers"],
     };
 

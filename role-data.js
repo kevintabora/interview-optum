@@ -332,7 +332,7 @@
               <article>
                 <h4>Training Designer app</h4>
                 <div class="project-tags">
-                  <a href="#pdc-q13-data-technology" data-question-link="pdc-q13-data-technology">data</a>
+                  <a href="#pdc-q14-data-technology" data-question-link="pdc-q14-data-technology">data</a>
                 </div>
                 <p>Built a tool that helps quantify the structure of training by objective, activity, cognitive task, content type, media, method, and duration.</p>
               </article>
@@ -511,6 +511,7 @@
       "Tell me about a time you coached someone and helped them grow.": "3E coaching",
       "Tell me about a session where you had to facilitate, not just present.": "Rise workshop",
       "Tell me about a time you discovered training was not the real solution.": "Not a training problem",
+      "What measures of success would you use for an Early Careers program?": "Early Careers measures",
       "How do you diagnose development needs?": "Diagnose needs",
       "How do you use data and technology in people development?": "Data and AI",
       "How do you define and measure speed to proficiency?": "Speed to proficiency",
@@ -520,9 +521,12 @@
       "Tell me about a time you made development more accessible or equitable.": "Accessibility lesson",
       "Tell me about a time you received unexpected or difficult feedback.": "Difficult feedback",
       "Tell me about a time you failed.": "Failed adoption",
+      "What was the most stressful experience of your career?": "Stressful stretch",
       "What is your biggest weakness?": "Taking over",
       "What would your first 90 days look like in this role?": "First 90 days",
       "What would you do if you do not get this role?": "If not selected",
+      "Was there ever a time a request was vague but you navigated it successfully?": "Vague request",
+      "If this role were SG27 as a lateral move with no increase, would you still take it?": "Lateral move",
       "What is your leadership philosophy?": "Leadership philosophy",
     };
 
